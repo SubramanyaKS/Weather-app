@@ -73,8 +73,8 @@ const Main = () => {
   };
   return (
     <>
-      <div className="main">
-        <h1 style={{ textAlign: "center", color: "white" }}>Weather App</h1>
+      <div className="main"><br/>
+        <h1 style={{ textAlign: "center", color: "white",fontFamily:"cursive" }}>Weather App</h1>
         <div className="search">
           <form onSubmit={fetchDetails}>
             <input
