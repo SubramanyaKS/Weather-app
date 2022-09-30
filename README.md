@@ -26,7 +26,6 @@ This is Simple Weather App which gives information of weather details of particu
 
 ```
 git clone https://github.com/SubramanyaKS/Weather-app.git
-
 ```
 
 2.  Install all dependency in package.json
