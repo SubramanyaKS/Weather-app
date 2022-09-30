@@ -25,6 +25,7 @@ const Main = () => {
     humidity: "",
     wind_speed: "",
     icon:"",
+    main:"",
     
   });
   const refresh = () => {
@@ -61,6 +62,7 @@ const Main = () => {
           humidity: result.main.humidity,
           wind_speed: result.wind.speed,
           icon: result.weather[0].icon,
+          main:result.weather[0].main,
          
         });
        
@@ -68,7 +70,7 @@ const Main = () => {
           console.log("Subbu", result);
         }
         console.log(typeof result);
-        console.log(typeof data.icon);
+        console.log(data.main);
       })
       .catch((error) => {
         console.log(error);
@@ -100,6 +102,7 @@ const Main = () => {
             <Card style={{ width: "20rem" ,alignItems:"center"}}>
             
             <img src = {`http://openweathermap.org/img/wn/${data.icon}@2x.png`} alt="Images" />
+              <p>{data.main}</p>
               <Card.Body>
                 <Card.Title>{data.name}</Card.Title>
                 <Card.Subtitle className="mb-2 text-muted">
@@ -109,7 +112,7 @@ const Main = () => {
                   <b>Latitude</b> {data.lat} <b>Longitude</b> {data.lon}
                 </Card.Text>
                 <Card.Text>
-                  <b>Humidity</b> {data.humidity} % <b>Pressure</b>{" "}
+                  <b>Humidity</b> {data.humidity} % <b>Pressure</b>
                   {data.pressure} Pa
                 </Card.Text>
                 <Card.Text>
