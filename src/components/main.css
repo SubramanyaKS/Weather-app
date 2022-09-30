@@ -64,11 +64,13 @@ th td {
 }
 
 .card {
-  background-color: #07a9f5 !important;
+  background-image: url(../images/back.jpg);
+  background-size: cover;
+  /*background-color: #07a9f5 !important;*/
   margin-bottom: 10px;
   margin-left: 10px;
   border-radius: 0;
-  box-shadow: 5px 5px 15px #e74c;
+  box-shadow: 5px 5px 15px rgba(106, 154, 243, 0.8);
   transition: all 0.3s ease-in;
   -webkit-transition: all 0.3s ease-in;
   -moz-transition: all 0.3s ease-in;
