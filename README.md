@@ -38,21 +38,18 @@ npm install
 
 ```
 REACT_APP_API_KEY=<Your API Key>
-
 ```
 
 4.  Run application using command
 
 ```
 npm start
-
 ```
 
 5. Automatically open the website in localhost
 
 ```
 http://localhost/3000
-
 ```
 
 If you like the project 🌟 the repository.
