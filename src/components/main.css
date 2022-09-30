@@ -1,34 +1,31 @@
-@import url('https://fonts.googleapis.com/css2?family=Recursive&display=swap');
-html body{
-  width:100%;
-  height:100%;
+@import url("https://fonts.googleapis.com/css2?family=Recursive&display=swap");
+html body {
+  width: 100%;
+  height: 100%;
   background-attachment: fixed;
   background-size: cover;
-  margin:0;
-  padding:0;
+  margin: 0;
+  padding: 0;
   /*background-color: black;*/
   background-image: url(../images/weather.jpg);
 }
-.searchBar{
-    border-radius:15px;
-    width: 50%;
-    height:40px;
-    padding-left: 2%;
-    /*background:  url(../images/download.png) no-repeat scroll 7px 7px;;
+.searchBar {
+  border-radius: 15px;
+  width: 50%;
+  height: 40px;
+  padding-left: 2%;
+  /*background:  url(../images/download.png) no-repeat scroll 7px 7px;;
 */
-
 }
 table {
   border-collapse: separate;
   display: block !important;
   width: 100% !important;
-  
 }
-th td{
-  
-  text-align:center;
+th td {
+  text-align: center;
 }
-.card-show{
+.card-show {
   margin-top: 5%;
   text-align: center;
   display: block;
@@ -46,39 +43,37 @@ th td{
     border-radius: inherit;
   }*/
 
-  
-  
- /* input[type="search"]::placeholder {
+/* input[type="search"]::placeholder {
     color: #bbb;
   }*/
-.search{
-    align-items: center;
-    text-align: center;
-    padding-top: 5%;
+.search {
+  align-items: center;
+  text-align: center;
+  padding-top: 5%;
 }
-.main{
+.main {
   align-items: center;
   margin-bottom: 5%;
   width: 100%;
-  height:100%;
+  height: 100%;
 }
 
-.card{
-	background-color:#07a9f5 !important;
-	margin-bottom:10px;
-	margin-left:10px;
-	border-radius:0;
-	box-shadow:5px 5px 15px #e74c;
-	transition:all 0.3s ease-in;
-	-webkit-transition:all 0.3s ease-in;
-	-moz-transition:all 0.3s ease-in;
+.card {
+  background-color: #07a9f5 !important;
+  margin-bottom: 10px;
+  margin-left: 10px;
+  border-radius: 0;
+  box-shadow: 5px 5px 15px #e74c;
+  transition: all 0.3s ease-in;
+  -webkit-transition: all 0.3s ease-in;
+  -moz-transition: all 0.3s ease-in;
 }
-.card:hover{
-	background-color:#800000 !important;
-	transition:0.5s;
-	
-	color:#00FFFF;
-	border-radius:5px;
-	border:none;
-	box-shadow:5px,5px,10px,#9E9E9E;
+.card:hover {
+  background-color: #800000 !important;
+  transition: 0.5s;
+
+  color: #00ffff;
+  border-radius: 5px;
+  border: none;
+  box-shadow: 5px, 5px, 10px, #9e9e9e;
 }
