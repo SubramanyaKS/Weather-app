@@ -35,7 +35,7 @@ const Main = () => {
     setState(value);
     //fetchDetails();
   };
- var  im ="";
+ 
   const fetchDetails = (event) => {
     //const env = dotenv.config().parsed;
     event.preventDefault();
@@ -60,15 +60,15 @@ const Main = () => {
           pressure: result.main.pressure,
           humidity: result.main.humidity,
           wind_speed: result.wind.speed,
-          icon: result.weather.icon,
+          icon: result.weather[0].icon,
          
         });
-        im = "http://openweathermap.org/img/wn/"+result.weather.icon+"@2x.png"
+       
         if (typeof result === typeof data) {
           console.log("Subbu", result);
         }
         console.log(typeof result);
-        console.log(typeof data);
+        console.log(typeof data.icon);
       })
       .catch((error) => {
         console.log(error);
@@ -97,9 +97,9 @@ const Main = () => {
         <br />
         {data.name.length > 0 ? (
           <div className="col mb-2  d-flex align-items-center card-show">
-            <Card style={{ width: "20rem" }}>
-              {}
-            <Card.Img variant="top" src={im} />
+            <Card style={{ width: "20rem" ,alignItems:"center"}}>
+            
+            <img src = {`http://openweathermap.org/img/wn/${data.icon}@2x.png`} alt="Images" />
               <Card.Body>
                 <Card.Title>{data.name}</Card.Title>
                 <Card.Subtitle className="mb-2 text-muted">
