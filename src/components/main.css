@@ -9,6 +9,11 @@ html body {
   /*background-color: black;*/
   background-image: url(../images/weather.jpg);
 }
+img{
+  width:100px;
+  height:100px;
+  text-align: center;
+}
 .searchBar {
   border-radius: 15px;
   width: 50%;
