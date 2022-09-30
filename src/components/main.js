@@ -3,13 +3,12 @@ import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import "./main.css";
 import { faSearch } from "@fortawesome/free-solid-svg-icons";
 import Card from "react-bootstrap/Card";
-import  Button  from "react-bootstrap/Button";
+import Button from "react-bootstrap/Button";
 import { faRefresh } from "@fortawesome/free-solid-svg-icons";
 import "bootstrap/dist/css/bootstrap.min.css";
 //import dotenv from  'dotenv'
 
 const Main = () => {
-
   const [state, setState] = useState("");
   const [data, setData] = useState({
     id: 0,
@@ -24,19 +23,18 @@ const Main = () => {
     pressure: "",
     humidity: "",
     wind_speed: "",
-    icon:"",
-    main:"",
-    
+    icon: "",
+    main: "",
   });
   const refresh = () => {
     window.location.reload();
-  }
+  };
 
   const handleChange = (value) => {
     setState(value);
     //fetchDetails();
   };
- 
+
   const fetchDetails = (event) => {
     //const env = dotenv.config().parsed;
     event.preventDefault();
@@ -62,10 +60,9 @@ const Main = () => {
           humidity: result.main.humidity,
           wind_speed: result.wind.speed,
           icon: result.weather[0].icon,
-          main:result.weather[0].description,
-         
+          main: result.weather[0].description,
         });
-       
+
         if (typeof result === typeof data) {
           console.log("Subbu", result);
         }
@@ -78,8 +75,13 @@ const Main = () => {
   };
   return (
     <>
-      <div className="main"><br/>
-        <h1 style={{ textAlign: "center", color: "white",fontFamily:"cursive" }}>Weather App</h1>
+      <div className="main">
+        <br />
+        <h1
+          style={{ textAlign: "center", color: "white", fontFamily: "cursive" }}
+        >
+          Weather App
+        </h1>
         <div className="search">
           <form onSubmit={fetchDetails}>
             <input
@@ -99,9 +101,11 @@ const Main = () => {
         <br />
         {data.name.length > 0 ? (
           <div className="col mb-2  d-flex align-items-center card-show">
-            <Card style={{ width: "20rem" ,alignItems:"center"}}>
-            
-            <img src = {`http://openweathermap.org/img/wn/${data.icon}@2x.png`} alt="Images" />
+            <Card style={{ width: "20rem", alignItems: "center" }}>
+              <img
+                src={`http://openweathermap.org/img/wn/${data.icon}@2x.png`}
+                alt="Images"
+              />
               <p>{data.main}</p>
               <Card.Body>
                 <Card.Title>{data.name}</Card.Title>
@@ -125,7 +129,9 @@ const Main = () => {
                 <Card.Text>
                   <b>Minimum</b> {data.min} °C <b>Maximum</b> {data.max} °C
                 </Card.Text>
-                <Button className="button"  color='blue'  onClick={refresh} ><FontAwesomeIcon  icon={faRefresh}/></Button>
+                <Button className="button" color="blue" onClick={refresh}>
+                  <FontAwesomeIcon icon={faRefresh} />
+                </Button>
               </Card.Body>
             </Card>
             {/* <Card style={{ width: "25rem" }}>
