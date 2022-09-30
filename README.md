@@ -10,7 +10,7 @@ This is Simple Weather App which gives information of weather details of particu
 
 
 ### Pre Requisite
-* Installation of node is mandatory with npm 
+* Installation of [node](https://nodejs.org/en/) is mandatory with npm 
 * Login in to [Openweathermap](https://openweathermap.org/api) api website for to get your `API key`
 
 
