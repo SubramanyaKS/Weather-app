@@ -32,7 +32,6 @@ git clone https://github.com/SubramanyaKS/Weather-app.git
 
 ```
 npm install
-
 ```
 3.  Create .env folder and paste the key in variable REACT_APP_API_KEY
 
