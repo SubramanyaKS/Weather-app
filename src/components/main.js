@@ -62,7 +62,7 @@ const Main = () => {
           humidity: result.main.humidity,
           wind_speed: result.wind.speed,
           icon: result.weather[0].icon,
-          main:result.weather[0].main,
+          main:result.weather[0].description,
          
         });
        
