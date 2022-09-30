@@ -2,6 +2,12 @@
 
 This is Simple Weather App which gives information of weather details of particular city across the world.
 
+### Features
+
+* Search functionality
+* Accurate result
+* Decent UI
+
 ### Technology Used
 
 * React JS 
