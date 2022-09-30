@@ -7,7 +7,7 @@ html body {
   margin: 0;
   padding: 0;
   /*background-color: black;*/
-  background-image: url(../images/weather.jpg);
+  background-image: url(../images/weather1.jpg);
 }
 img{
   width:100px;
@@ -64,7 +64,7 @@ th td {
 }
 
 .card {
-  background-image: url(../images/back.jpg);
+  background-image: url(../images/weather1.jpg);
   background-size: cover;
   /*background-color: #07a9f5 !important;*/
   margin-bottom: 10px;
