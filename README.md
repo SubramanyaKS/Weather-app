@@ -51,6 +51,10 @@ npm start
 http://localhost/3000
 ```
 
+### LICENSE
+
+This project is under MIT License.
+
 If you like the project 🌟 the repository.
 
 Thank you with ❤ Subramanya KS
