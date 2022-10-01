@@ -134,64 +134,6 @@ const Main = () => {
                 </Button>
               </Card.Body>
             </Card>
-            {/* <Card style={{ width: "25rem" }}>
-              <Card.Img variant="top" src={images} />
-                <Card.ImgOverlay>
-                  <Card.Title style={{ color: "black" }}>{data.name}</Card.Title>
-                  <p><b>Longitude: </b>{data.lon} </p>
-          
-          <table>
-
-            <thead>
-              <tr>
-                <th><b>Longitude </b></th>
-                <th><b>Latitude </b></th>
-                <th><b>Country </b></th>
-                <th><b>Humidity </b></th>
-                <th><b>Pressure </b></th>
-                <th><b>Wind Speed</b></th>
-
-              </tr>
-
-            </thead>
-            <tbody>
-              <tr>
-                <td> {data.lon}</td>
-                <td> {data.lat}</td>
-                <td> {data.country}</td>
-                <td> {data.humidity}</td>
-                <td> {data.pressure}</td>
-                <td> {data.wind_speed}</td>
-              </tr>
-            </tbody>
-            
-            
-
-          </table> 
-          <br/>  
-          <table>
-          <thead>
-              <tr>
-              <th><b>Temperature </b></th>
-               <th><b>Feels Like </b></th>
-               <th><b>Minimum  </b></th>
-               <th><b>Maximum </b></th>
-
-              </tr>
-            </thead>
-            <tbody>
-              <tr>
-                <td>{data.temp}</td>
-                <td>{data.feels_like}</td>
-                <td>{data.min}</td>
-                <td>{data.max}</td>
-              </tr>
-            </tbody>
-            </table>       
-            
-                
-                </Card.ImgOverlay>
-          </Card>*/}
           </div>
         ) : null}
       </div>
