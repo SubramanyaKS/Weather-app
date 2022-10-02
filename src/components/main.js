@@ -1,10 +1,13 @@
 import React, { useState } from "react";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import "./main.css";
-import { faSearch } from "@fortawesome/free-solid-svg-icons";
+import { faLocation, faSearch, faTemperature0, faTemperature2, faTemperatureHalf, faTemperatureHigh } from "@fortawesome/free-solid-svg-icons";
 import Card from "react-bootstrap/Card";
 import Button from "react-bootstrap/Button";
 import { faRefresh } from "@fortawesome/free-solid-svg-icons";
+import { faWind } from "@fortawesome/free-solid-svg-icons";
+import { faGaugeSimpleMed } from "@fortawesome/free-solid-svg-icons";
+import { faDroplet } from "@fortawesome/free-solid-svg-icons";
 import "bootstrap/dist/css/bootstrap.min.css";
 //import dotenv from  'dotenv'
 
@@ -108,26 +111,30 @@ const Main = () => {
               />
               <p>{data.main}</p>
               <Card.Body>
-                <Card.Title>{data.name}</Card.Title>
-                <Card.Subtitle className="mb-2 text-muted">
+                <Card.Title><b>{data.name}</b></Card.Title>
+                <Card.Subtitle className="mb-2">
                   {data.country}
                 </Card.Subtitle>
                 <Card.Text>
-                  <b>Latitude</b> {data.lat} <b>Longitude</b> {data.lon}
+                <FontAwesomeIcon icon={faLocation} /> <b>Latitude</b> {data.lat} <b>Longitude</b> {data.lon}
                 </Card.Text>
                 <Card.Text>
-                  <b>Humidity</b> {data.humidity} % <b>Pressure</b>
-                  {data.pressure} Pa
+                <FontAwesomeIcon icon={faDroplet} /> <b>Humidity</b> {data.humidity} %   
+                </Card.Text>
+                <Card.Text><FontAwesomeIcon icon={faGaugeSimpleMed} /><b>Pressure</b>
+                  {data.pressure} Pa</Card.Text>
+                <Card.Text>
+                <FontAwesomeIcon icon={faWind} /> <b>Wind Speed</b> {data.wind_speed} km/hr
                 </Card.Text>
                 <Card.Text>
-                  <b>Wind Speed</b> {data.wind_speed}
+                <FontAwesomeIcon icon={faTemperatureHalf} /><b>Temperature</b> {data.temp} °C 
                 </Card.Text>
+                <Card.Text><FontAwesomeIcon icon={faTemperature2} /><b>Feels Like</b>{" "}
+                  {data.feels_like} °C</Card.Text>
                 <Card.Text>
-                  <b>Temperature</b> {data.temp} °C <b>Feels Like</b>{" "}
-                  {data.feels_like} °C
+                <FontAwesomeIcon icon={faTemperature0} /> <b>Minimum</b> {data.min} °C 
                 </Card.Text>
-                <Card.Text>
-                  <b>Minimum</b> {data.min} °C <b>Maximum</b> {data.max} °C
+                <Card.Text><FontAwesomeIcon icon={faTemperatureHigh} /><b>Maximum</b> {data.max} °C
                 </Card.Text>
                 <Button className="button" color="blue" onClick={refresh}>
                   <FontAwesomeIcon icon={faRefresh} />
