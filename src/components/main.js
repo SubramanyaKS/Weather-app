@@ -107,7 +107,7 @@ const Main = () => {
           <div className="col mb-2  d-flex align-items-center card-show">
             <Card style={{ width: "20rem", alignItems: "center" }}>
               <img
-                src={`http://openweathermap.org/img/wn/${data.icon}@2x.png`}
+                src={`https://openweathermap.org/img/wn/${data.icon}@2x.png`}
                 alt="Images"
               />
               <p>{data.main}</p>
