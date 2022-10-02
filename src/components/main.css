@@ -7,8 +7,9 @@ html body {
   height: 100%;
   background-attachment: fixed;
   background-size: cover;
-  margin: 2%;
-  padding: 12%;
+  margin: 0%;
+  padding: 13%;
+  padding-bottom: 15%;
   background-color: #180a29;
  /* background-image: url(../images/weather1.jpg);*/
 }
