@@ -81,13 +81,14 @@ const Main = () => {
       <div className="main">
         <br />
         <h1
-          style={{ textAlign: "center", color: "white", fontFamily: "cursive" }}
+          style={{ textAlign: "center", color: "#00ffff", fontFamily: "cursive" }}
         >
           Weather App
         </h1>
         <div className="search">
           <form onSubmit={fetchDetails}>
             <input
+            type="text"
               placeholder="Enter the City"
               icon={faSearch}
               className="searchBar"
@@ -98,7 +99,7 @@ const Main = () => {
               variant="outlined"
               label="Search"
             />
-            <FontAwesomeIcon icon={faSearch} style={{ fontSize: "24px" }} />
+            <FontAwesomeIcon icon={faSearch}  style={{ fontSize: "24px" ,paddingLeft:"1%",color:"#00ffff"}} />
           </form>
         </div>
         <br />
@@ -116,28 +117,28 @@ const Main = () => {
                   {data.country}
                 </Card.Subtitle>
                 <Card.Text>
-                <FontAwesomeIcon icon={faLocation} /> <b>Latitude</b> {data.lat} <b>Longitude</b> {data.lon}
+                <FontAwesomeIcon icon={faLocation} beatFade/> <b>Latitude: </b> {data.lat} <b>Longitude: </b> {data.lon}
                 </Card.Text>
                 <Card.Text>
-                <FontAwesomeIcon icon={faDroplet} /> <b>Humidity</b> {data.humidity} %   
+                <FontAwesomeIcon icon={faDroplet} bounce /> <b>Humidity: </b> {data.humidity} %   
                 </Card.Text>
-                <Card.Text><FontAwesomeIcon icon={faGaugeSimpleMed} /><b>Pressure</b>
+                <Card.Text><FontAwesomeIcon icon={faGaugeSimpleMed} fade /><b>Pressure: </b>
                   {data.pressure} Pa</Card.Text>
                 <Card.Text>
-                <FontAwesomeIcon icon={faWind} /> <b>Wind Speed</b> {data.wind_speed} km/hr
+                <FontAwesomeIcon icon={faWind} flip/> <b>Wind Speed: </b> {data.wind_speed} km/hr
                 </Card.Text>
                 <Card.Text>
-                <FontAwesomeIcon icon={faTemperatureHalf} /><b>Temperature</b> {data.temp} °C 
+                <FontAwesomeIcon icon={faTemperatureHalf} shake/><b>Temperature</b> {data.temp} °C 
                 </Card.Text>
-                <Card.Text><FontAwesomeIcon icon={faTemperature2} /><b>Feels Like</b>{" "}
+                <Card.Text><FontAwesomeIcon icon={faTemperature2} shake /><b>Feels Like: </b>{" "}
                   {data.feels_like} °C</Card.Text>
                 <Card.Text>
-                <FontAwesomeIcon icon={faTemperature0} /> <b>Minimum</b> {data.min} °C 
+                <FontAwesomeIcon icon={faTemperature0} shake /> <b>Minimum: </b> {data.min} °C 
                 </Card.Text>
-                <Card.Text><FontAwesomeIcon icon={faTemperatureHigh} /><b>Maximum</b> {data.max} °C
+                <Card.Text><FontAwesomeIcon icon={faTemperatureHigh} shake/><b>Maximum: </b> {data.max} °C
                 </Card.Text>
                 <Button className="button" color="blue" onClick={refresh}>
-                  <FontAwesomeIcon icon={faRefresh} />
+                  <FontAwesomeIcon icon={faRefresh} spin/>
                 </Button>
               </Card.Body>
             </Card>
