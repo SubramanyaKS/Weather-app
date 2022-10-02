@@ -76,7 +76,7 @@ git push origin xyz
 ---
 ### Deploy
 
-https://subramanyaks.github.io/Weather-app/
+[Link](https://subramanyaks.github.io/Weather-app/)
 
 
 ---
