@@ -72,6 +72,12 @@ git push origin xyz
 5. Open a pull request
 
 ---
+### Deploy
+
+https://subramanyaks.github.io/Weather-app/
+
+
+---
 
 <!--Licence-->
 ### LICENSE
