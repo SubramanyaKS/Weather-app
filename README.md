@@ -51,10 +51,33 @@ npm start
 http://localhost/3000
 ```
 
+### Contribution
+
+if you want to contribute to this project. 
+
+1. Fork the repository
+2. Create a new branch (any name except main and master)
+```
+git checkout -b xyz
+```
+3. Make changes and commit your changes.
+```
+git commit -m "Changes in xyz"
+```
+4. Push the changes to new branch.
+```
+git push origin xyz
+```
+5. Open a pull request
+
+
 <!--Licence-->
 ### LICENSE
 
-This project is distributed under MIT License.
+This project is distributed under MIT License read `LICENSE` file for more details .
+
+
+
 
 If you like the project 🌟 the repository.
 
