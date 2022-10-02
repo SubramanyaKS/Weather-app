@@ -1,25 +1,25 @@
 # Weather App
 
 This is Simple Weather App which gives information of weather details of particular city across the world.
-
+---
 ### Features
 
 * Search functionality
 * Accurate result
 * Decent UI
-
+---
 ### Technology Used
 
 * React JS 
 * Bootstrap
 * OpenWeathermap API
 
-
+---
 ### Pre Requisite
 * Installation of [node](https://nodejs.org/en/) is mandatory with npm 
 * Login in to [Openweathermap](https://openweathermap.org/api) api website for to get your `API key`
 
-
+---
 ### Run and Setup
 
 1. Fork the Project and clone Repository using git clone
@@ -50,6 +50,7 @@ npm start
 ```
 http://localhost/3000
 ```
+---
 
 ### Contribution
 
@@ -70,14 +71,14 @@ git push origin xyz
 ```
 5. Open a pull request
 
+---
 
 <!--Licence-->
 ### LICENSE
 
 This project is distributed under MIT License read `LICENSE` file for more details .
 
-
-
+---
 
 If you like the project 🌟 the repository.
 
