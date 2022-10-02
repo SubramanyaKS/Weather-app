@@ -1,25 +1,33 @@
 @import url("https://fonts.googleapis.com/css2?family=Recursive&display=swap");
+html{
+  border: 5px solid #00ffff;
+}
 html body {
   width: 100%;
   height: 100%;
   background-attachment: fixed;
   background-size: cover;
-  margin: 0;
-  padding: 0;
-  /*background-color: black;*/
-  background-image: url(../images/weather1.jpg);
+  margin: 2%;
+  padding: 12%;
+  background-color: #180a29;
+ /* background-image: url(../images/weather1.jpg);*/
 }
 img{
   width:100px;
   height:100px;
   text-align: center;
 }
+input[type="text"]{
+  background-color:#00ffff !important;
+  font-size: medium;
+}
 .searchBar {
   border-radius: 15px;
   width: 50%;
   height: 40px;
   padding-left: 2%;
-  /*background:  url(../images/download.png) no-repeat scroll 7px 7px;;
+  
+  /*background:  url(../images/download.png) no-repeat scroll 7px 7px;
 */
 }
 table {
@@ -64,23 +72,25 @@ th td {
 }
 
 .card {
-  background-image: url(../images/weather1.jpg);
+  /*background-image: url(../images/weather1.jpg);*/
+  background-color: #180a29 !important;
   background-size: cover;
-  /*background-color: #07a9f5 !important;*/
+  /*background-color: #07a9f5 ;*/
   margin-bottom: 10px;
   margin-left: 10px;
   border-radius: 0;
-  box-shadow: 5px 5px 15px rgba(106, 154, 243, 0.8);
+  box-shadow: 5px 5px 15px 5px #00ffff;
   transition: all 0.3s ease-in;
   -webkit-transition: all 0.3s ease-in;
   -moz-transition: all 0.3s ease-in;
+  color: #00ffff;
 }
 .card:hover {
-  background-color: #800000 !important;
+  background-color: #00ffff !important;
   transition: 0.5s;
-
-  color: #00ffff;
+  color: #180a29;
   border-radius: 5px;
+  
   border: none;
-  box-shadow: 5px, 5px, 10px, #9e9e9e;
+  box-shadow: 5px, 5px, 10px,5px, #180a29;
 }
