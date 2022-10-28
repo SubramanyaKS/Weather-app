@@ -87,6 +87,11 @@ git push origin xyz
 This project is distributed under MIT License read `LICENSE` file for more details .
 
 ---
+### Credits
+
+[Openweathermap API](https://openweathermap.org/api)
+
+---
 
 If you like the project 🌟 the repository.
 
