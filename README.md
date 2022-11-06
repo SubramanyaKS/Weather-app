@@ -3,6 +3,9 @@
 
 This is Simple Weather App which gives information of weather details of particular city across the world.
 
+#### API
+
+The Application Programming Interface is a set of rules and regulations and standards that allows software programs to interact with each other. It acts as a middleman between two applications, allowing them to exchange data and information
 
 ---
 ### Features
