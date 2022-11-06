@@ -13,9 +13,10 @@ This is Simple Weather App which gives information of weather details of particu
 ---
 ### Technology Used
 
-* React JS 
-* Bootstrap
+* ![React](https://img.shields.io/badge/react-%2320232a.svg?style=for-the-badge&logo=react&logoColor=%2361DAFB)
+* ![Bootstrap](https://img.shields.io/badge/bootstrap-%23563D7C.svg?style=for-the-badge&logo=bootstrap&logoColor=white)
 * OpenWeathermap API
+* ![VS Code](https://img.shields.io/badge/Visual_Studio_Code-0078D4?style=for-the-badge&logo=visual%20studio%20code&logoColor=white)
 
 ---
 #### API Details
@@ -38,7 +39,8 @@ the details used from the `openweathermap API` is follows:
 
 ---
 ### Pre Requisite
-* Installation of [node](https://nodejs.org/en/) is mandatory with npm 
+* Install ![git](https://img.shields.io/badge/GIT-E44C30?style=for-the-badge&logo=git&logoColor=white)
+* Installation of [![NodeJS](https://img.shields.io/badge/node.js-6DA55F?style=for-the-badge&logo=node.js&logoColor=white)](https://nodejs.org/en/) is mandatory with ![NPM](https://img.shields.io/badge/NPM-%23000000.svg?style=for-the-badge&logo=npm&logoColor=white)
 * Login in to [Openweathermap](https://openweathermap.org/api) api website for to get your `API key`
 
 ---
@@ -96,7 +98,7 @@ git push origin xyz
 ---
 ### Deploy
 
-[Link](https://subramanyaks.github.io/Weather-app/)
+[Demo Link](https://subramanyaks.github.io/Weather-app/)
 
 
 ---
@@ -105,6 +107,11 @@ git push origin xyz
 ### LICENSE
 
 This project is distributed under MIT License read `LICENSE` file for more details .
+
+---
+### Credits
+
+[Openweathermap API](https://openweathermap.org/api)
 
 ---
 
