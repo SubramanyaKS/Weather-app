@@ -34,7 +34,7 @@ the details used from the `openweathermap API` is follows:
 9. `main.temp_max` Maximum temperature at the moment. This is maximal currently observed temperature (within large megalopolises and urban areas). Unit Default: Kelvin, Metric: Celsius, Imperial: Fahrenheit.
 10. `coord.lon` City geo location, longitude.
 11. `coord.lat` City geo location, latitude.
-12. `weather.description` Weather condition within the group. You can get the output in your language. Learn more
+12. `weather.description` Weather condition within the group. You can get the output in your language.
 13. `weather.icon` Weather icon id
 
 ---
