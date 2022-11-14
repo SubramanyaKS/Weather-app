@@ -101,6 +101,8 @@ git push origin xyz
 ---
 ### Deploy
 
+This react website is deployed in github you can se the demo using below link.
+
 [Demo Link](https://subramanyaks.github.io/Weather-app/)
 
 
