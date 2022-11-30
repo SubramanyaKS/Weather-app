@@ -22,7 +22,7 @@ The Application Programming Interface is a set of rules and regulations and stan
 * ![VS Code](https://img.shields.io/badge/Visual_Studio_Code-0078D4?style=for-the-badge&logo=visual%20studio%20code&logoColor=white)
 
 ---
-#### API Details
+### API Details
 
 the details used from the `openweathermap API` is follows:
 
@@ -101,7 +101,7 @@ git push origin xyz
 ---
 ### Deploy
 
-This react website is deployed in github you can se the demo using below link.
+This react website is deployed in github you can see the demo using below link.
 
 [Demo Link](https://subramanyaks.github.io/Weather-app/)
 
