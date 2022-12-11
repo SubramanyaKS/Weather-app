@@ -8,13 +8,13 @@ This is Simple Weather App which gives information of weather details of particu
 The Application Programming Interface is a set of rules and regulations and standards that allows software programs to interact with each other. It acts as a middleman between two applications, allowing them to exchange data and information
 
 ---
-### Features
+## Features
 
 * Search functionality
 * Accurate result
 * Decent UI
 ---
-### Technology Used
+## Technology Used
 
 * ![React](https://img.shields.io/badge/react-%2320232a.svg?style=for-the-badge&logo=react&logoColor=%2361DAFB)
 * ![Bootstrap](https://img.shields.io/badge/bootstrap-%23563D7C.svg?style=for-the-badge&logo=bootstrap&logoColor=white)
@@ -22,7 +22,7 @@ The Application Programming Interface is a set of rules and regulations and stan
 * ![VS Code](https://img.shields.io/badge/Visual_Studio_Code-0078D4?style=for-the-badge&logo=visual%20studio%20code&logoColor=white)
 
 ---
-### API Details
+## API Details
 
 the details used from the `openweathermap API` is follows:
 
@@ -41,13 +41,13 @@ the details used from the `openweathermap API` is follows:
 13. `weather.icon` Weather icon id
 
 ---
-### Pre Requisite
+## Pre Requisite
 * Install ![git](https://img.shields.io/badge/GIT-E44C30?style=for-the-badge&logo=git&logoColor=white)
 * Installation of [![NodeJS](https://img.shields.io/badge/node.js-6DA55F?style=for-the-badge&logo=node.js&logoColor=white)](https://nodejs.org/en/) is mandatory with ![NPM](https://img.shields.io/badge/NPM-%23000000.svg?style=for-the-badge&logo=npm&logoColor=white)
 * Login in to [Openweathermap](https://openweathermap.org/api) api website for to get your `API key`
 
 ---
-### Run and Setup
+## Run and Setup
 
 1. Fork the Project and clone Repository using git clone
 
@@ -79,7 +79,7 @@ http://localhost/3000
 ```
 ---
 
-### Contribution
+## Contribution
 
 if you want to contribute to this project. 
 
@@ -99,7 +99,7 @@ git push origin xyz
 5. Open a pull request
 
 ---
-### Deploy
+## Deploy
 
 This react website is deployed in github you can see the demo using below link.
 
@@ -109,12 +109,12 @@ This react website is deployed in github you can see the demo using below link.
 ---
 
 <!--Licence-->
-### LICENSE
+## LICENSE
 
 This project is distributed under MIT License read `LICENSE` file for more details .
 
 ---
-### Credits
+## Credits
 
 [Openweathermap API](https://openweathermap.org/api)
 
