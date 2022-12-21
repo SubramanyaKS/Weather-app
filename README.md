@@ -44,7 +44,7 @@ the details used from the `openweathermap API` is follows:
 ## Pre Requisite
 * Install ![git](https://img.shields.io/badge/GIT-E44C30?style=for-the-badge&logo=git&logoColor=white)
 * Installation of [![NodeJS](https://img.shields.io/badge/node.js-6DA55F?style=for-the-badge&logo=node.js&logoColor=white)](https://nodejs.org/en/) is mandatory with ![NPM](https://img.shields.io/badge/NPM-%23000000.svg?style=for-the-badge&logo=npm&logoColor=white)
-* Login in to [Openweathermap](https://openweathermap.org/api) api website for to get your `API key`
+* Login in to [Openweathermap](https://openweathermap.org/api) api website to get your `API key`
 
 ---
 ## Run and Setup
