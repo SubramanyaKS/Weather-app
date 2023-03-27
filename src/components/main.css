@@ -8,10 +8,13 @@ html body {
   background-attachment: fixed;
   background-size: cover;
   margin: 0%;
-  padding: 13%;
-  padding-bottom: 15%;
-  background-color: #180a29;
+  padding: 0%;
+  padding-bottom: 0%;
+  background-color: #180a29 !important;
  /* background-image: url(../images/weather1.jpg);*/
+}
+body {
+  min-height: 100vh;
 }
 img{
   width:100px;
@@ -22,6 +25,11 @@ input[type="text"]{
   background-color:#00ffff !important;
   font-size: medium;
 }
+/* .input-search{
+  border:1px solid white;
+  display:flex;
+  flex-direction:"row";
+} */
 .searchBar {
   border-radius: 15px;
   width: 50%;
@@ -41,10 +49,11 @@ th td {
 }
 .card-show {
   margin-top: 5%;
-  text-align: center;
-  display: block;
-  align-items: center;
-  padding-left: 35%;
+  /* text-align: center; */
+  display: flex;
+  /* align-items: center; */
+  justify-content:center;
+  padding-left: 0%;
 }
 /*input[type="search"] {
     border: none;
