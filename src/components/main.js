@@ -79,6 +79,7 @@ const Main = () => {
         </h1>
         <div className="search">
           <form onSubmit={fetchDetails}>
+            <div className="input-search">
             <input
             type="text"
               placeholder="Enter the City"
@@ -92,11 +93,12 @@ const Main = () => {
               label="Search"
             />
             <FontAwesomeIcon icon={faSearch}  style={{ fontSize: "24px" ,paddingLeft:"1%",color:"#00ffff"}} />
+            </div>
           </form>
         </div>
         <br />
         {data.name.length > 0 ? (
-          <div className="col mb-2  d-flex align-items-center card-show">
+          <div className="col   d-flex align-items-center card-show">
             <WeatherCard data={data} />
           </div>
         ) : null}
