@@ -5,12 +5,11 @@ import { faSearch } from "@fortawesome/free-solid-svg-icons";
 import "bootstrap/dist/css/bootstrap.min.css";
 import WeatherCard from "./WeatherCard";
 import { Theme } from "../context/ThemeContext";
-import { Button } from "react-bootstrap";
 //import dotenv from  'dotenv'
 
 const Main = () => {
   // const{state:theme,dispatch} = useContext(Theme);
-  const {dark,setDark} = useContext(Theme);
+  const {dark} = useContext(Theme);
 
   const [state, setState] = useState("");
   const [data, setData] = useState({
