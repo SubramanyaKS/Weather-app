@@ -1,12 +1,13 @@
-import React from "react";
+import React, { useContext } from "react";
 import { Card } from "react-bootstrap";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import "./main.css";
+import { Theme } from "../context/ThemeContext";
+
 import {
   faLocation,
   faTemperature0,
   faTemperature2,
-  faTemperatureHalf,
   faTemperatureHigh,
 } from "@fortawesome/free-solid-svg-icons";
 import Button from "react-bootstrap/Button";
@@ -17,11 +18,14 @@ import { faDroplet } from "@fortawesome/free-solid-svg-icons";
 import "bootstrap/dist/css/bootstrap.min.css";
 
 const WeatherCard = ({ data }) => {
+  const {dark,setDark} = useContext(Theme);
+  // const {state,dispatch} = useContext(Theme);
+
   const refresh = () => {
     window.location.reload();
   };
   return (
-    <Card style={{ width: "85%" }}>
+    <Card className={dark?"card-dark":"card-light"} style={{ width: "85%" }}>
       <div
         style={{
           alignItems: "center",
@@ -48,19 +52,19 @@ const WeatherCard = ({ data }) => {
             marginTop: "10px",
           }}
         >
-          <Card style={{ width: "20%" }}>
+          <Card className={dark?"card-dark":"card-light"} style={{ width: "20%" }}>
             <Card.Text>
               <FontAwesomeIcon icon={faTemperature2} shake />
               <b> Feels Like: </b> {data.feels_like} °C
             </Card.Text>
           </Card>
-          <Card style={{ width: "20%" }}>
+          <Card className={dark?"card-dark":"card-light"} style={{ width: "20%" }}>
           <Card.Text>
             <FontAwesomeIcon icon={faTemperature0} shake /> <b> Minimum: </b>{" "}
             {data.min} °C
           </Card.Text>
           </Card>
-          <Card style={{ width: "20%"}}>
+          <Card className={dark?"card-dark":"card-light"} style={{ width: "20%"}}>
           <Card.Text>
             <FontAwesomeIcon icon={faTemperatureHigh} shake />
             <b>Maximum: </b> {data.max} °C
@@ -74,19 +78,19 @@ const WeatherCard = ({ data }) => {
             marginTop: "20px",
           }}
         >
-          <Card style={{ width: "20%", }}>
+          <Card className={dark?"card-dark":"card-light"} style={{ width: "20%", }}>
         <Card.Text>
           <FontAwesomeIcon icon={faLocation} beatFade /> <b>Latitude: </b>{" "}
           {data.lat} 
         </Card.Text>
         </Card>
-        <Card style={{ width: "20%"}}>
+        <Card className={dark?"card-dark":"card-light"} style={{ width: "20%"}}>
         <Card.Text>
           <FontAwesomeIcon icon={faLocation} beatFade /> <b>Longitude: </b>{" "}
           {data.lon} 
         </Card.Text>
           </Card>
-          <Card style={{ width: "20%" }}>
+          <Card className={dark?"card-dark":"card-light"} style={{ width: "20%" }}>
         <Card.Text>
           <FontAwesomeIcon icon={faDroplet} bounce /> <b>Humidity: </b>{" "}
           {data.humidity} %
@@ -100,14 +104,14 @@ const WeatherCard = ({ data }) => {
             marginTop: "10px",
           }}
         >
-          <Card style={{ width: "20%" }}>
+          <Card className={dark?"card-dark":"card-light"} style={{ width: "20%" }}>
         <Card.Text>
           <FontAwesomeIcon icon={faGaugeSimpleMed} fade />
           <b>Pressure: </b>
           {data.pressure} Pa
         </Card.Text>
         </Card>
-        <Card style={{ width: "20%" }}>
+        <Card className={dark?"card-dark":"card-light"} style={{ width: "20%" }}>
         <Card.Text>
           <FontAwesomeIcon icon={faWind} flip /> <b>Wind Speed: </b>{" "}
           {data.wind_speed} km/hr
