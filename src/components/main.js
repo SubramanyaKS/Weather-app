@@ -1,12 +1,17 @@
-import React, { useState } from "react";
+import React, { useContext, useState } from "react";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import "./main.css";
 import { faSearch } from "@fortawesome/free-solid-svg-icons";
 import "bootstrap/dist/css/bootstrap.min.css";
 import WeatherCard from "./WeatherCard";
+import { Theme } from "../context/ThemeContext";
+import { Button } from "react-bootstrap";
 //import dotenv from  'dotenv'
 
 const Main = () => {
+  // const{state:theme,dispatch} = useContext(Theme);
+  const {dark,setDark} = useContext(Theme);
+
   const [state, setState] = useState("");
   const [data, setData] = useState({
     id: 0,
@@ -29,6 +34,20 @@ const Main = () => {
     setState(value);
     //fetchDetails();
   };
+
+  // const dark =theme.state.dark;
+  // const toggleTheme =()=>{
+  //   if (dark)
+  //     // dispatch({ type: "LIGHTMODE" });
+  //     setDark(false);
+      
+  //   else
+  //   setDark(true);
+  //     // dispatch({ type: "DARKMODE" });
+
+
+  // }
+  console.log(dark);
 
   const fetchDetails = (event) => {
     //const env = dotenv.config().parsed;
@@ -70,13 +89,20 @@ const Main = () => {
   };
   return (
     <>
-      <div className="main">
+      <div className={dark?"main-dark":"main"}>
         <br />
-        <h1
-          style={{ textAlign: "center", color: "#00ffff", fontFamily: "cursive" }}
+        
+        <h1 className="headline"
+          style={dark?{  color: "#00ffff"}:{color:"#000"}}
         >
           Weather App
         </h1>
+        <div>
+        {/* <label className="switch">
+  <input type="checkbox" ={console.log("Hi")}/>
+  <span className="slider round"></span>
+</label> */}
+        </div>
         <div className="search">
           <form onSubmit={fetchDetails}>
             <div className="input-search">
@@ -92,7 +118,7 @@ const Main = () => {
               variant="outlined"
               label="Search"
             />
-            <FontAwesomeIcon icon={faSearch}  style={{ fontSize: "24px" ,paddingLeft:"1%",color:"#00ffff"}} />
+            <FontAwesomeIcon icon={faSearch} className="icon-switch"  style={dark?{ color:"#00ffff"}:{color:"#000"}} />
             </div>
           </form>
         </div>
