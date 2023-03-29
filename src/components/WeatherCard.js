@@ -19,7 +19,7 @@ import "bootstrap/dist/css/bootstrap.min.css";
 import MiniCard from "./MiniCard";
 
 const WeatherCard = ({ data }) => {
-  const {dark,setDark} = useContext(Theme);
+  const {dark} = useContext(Theme);
   // const {state,dispatch} = useContext(Theme);
 
   const refresh = () => {
