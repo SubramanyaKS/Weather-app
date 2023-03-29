@@ -1,6 +1,6 @@
 import './App.css';
 import Header from './components/Header';
-import Main from './components/main';
+import Main from './pages/main';
 import { ThemeProvider } from './context/ThemeContext';
 import WeatherContext from './context/weatherContext';
 
