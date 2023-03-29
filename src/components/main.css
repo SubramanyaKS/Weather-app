@@ -1,4 +1,12 @@
 @import url("https://fonts.googleapis.com/css2?family=Recursive&display=swap");
+:root{
+  --light:#fff;
+  --dark:#180a29;
+  --mainlight:#eceff1;
+  --grey:#eceff1;
+  --green:#00ffff;
+  --black:#000;
+}
 html{
   border: 5px solid #000;
 }
@@ -10,7 +18,7 @@ html body {
   margin: 0%;
   padding: 0%;
   padding-bottom: 0%;
-  background-color: #180a29 !important;
+  background-color: var(--dark) !important;
  /* background-image: url(../images/weather1.jpg);*/
 }
 body {
@@ -21,6 +29,7 @@ img{
   height:100px;
   text-align: center;
 }
+
 input[type="text"]{
   /* background-color:#00ffff !important; */
   font-size: medium;
@@ -42,7 +51,7 @@ input[type="text"]{
   height: 0;
 }
 
-.slider {
+ .slider {
   position: absolute;
   cursor: pointer;
   top: 0;
@@ -61,7 +70,7 @@ input[type="text"]{
   width: 26px;
   left: 4px;
   bottom: 4px;
-  background-color: white;
+  background-color: var(--light);
   -webkit-transition: .4s;
   transition: .4s;
 }
@@ -87,7 +96,7 @@ input:checked + .slider:before {
 
 .slider.round:before {
   border-radius: 50%;
-}
+} 
 /* .input-search{
   border:1px solid white;
   display:flex;
@@ -152,7 +161,7 @@ th td {
   margin-bottom: 0;
   width: 100%;
   height: 100%;
-  background-color:#eceff1;
+  background-color:var(--mainlight);
   min-height: 100vh;
 }
 .headline{
@@ -161,14 +170,14 @@ th td {
 }
 
 .card-light{
-  background-color: #eceff1 !important;
-  color: #000;
-  box-shadow: 5px 5px 15px 5px #000;
+  background-color: var(--grey) !important;
+  color: var(--black);
+  box-shadow: 5px 5px 15px 5px var(--black);
 }
 .card-dark{
-  background-color: #180a29 !important;
-  color: #00ffff;
-  box-shadow: 5px 5px 15px 5px #00ffff;
+  background-color: var(--dark) !important;
+  color: var(--green);
+  box-shadow: 5px 5px 15px 5px var(--green);
 }
 
 .card {
@@ -186,11 +195,11 @@ th td {
   
 }
 .card:hover {
-  background-color: #00ffff !important;
+  background-color: var(--green) !important;
   transition: 0.5s;
-  color: #180a29;
+  color: var(--dark);
   border-radius: 5px;
   
   border: none;
-  box-shadow: 5px, 5px, 10px,5px, #180a29;
+  box-shadow: 5px, 5px, 10px,5px, var(--dark);
 }
