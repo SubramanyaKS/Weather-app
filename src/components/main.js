@@ -1,53 +1,20 @@
-import React, { useContext, useState } from "react";
+import React, { useContext } from "react";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import "./main.css";
 import { faSearch } from "@fortawesome/free-solid-svg-icons";
 import "bootstrap/dist/css/bootstrap.min.css";
 import WeatherCard from "./WeatherCard";
 import { Theme } from "../context/ThemeContext";
+import { Weather } from "../context/weatherContext";
 //import dotenv from  'dotenv'
 
 const Main = () => {
-  // const{state:theme,dispatch} = useContext(Theme);
   const {dark} = useContext(Theme);
-
-  const [state, setState] = useState("");
-  const [data, setData] = useState({
-    id: 0,
-    name: "",
-    country: "",
-    lat: "",
-    lon: "",
-    temp: "",
-    feels_like: "",
-    min: "",
-    max: "",
-    pressure: "",
-    humidity: "",
-    wind_speed: "",
-    icon: "",
-    main: "",
-  });
+  const {data,setData,state,setState} = useContext(Weather);
 
   const handleChange = (value) => {
     setState(value);
-    //fetchDetails();
   };
-
-  // const dark =theme.state.dark;
-  // const toggleTheme =()=>{
-  //   if (dark)
-  //     // dispatch({ type: "LIGHTMODE" });
-  //     setDark(false);
-      
-  //   else
-  //   setDark(true);
-  //     // dispatch({ type: "DARKMODE" });
-
-
-  // }
-  console.log(dark);
-
   const fetchDetails = (event) => {
     //const env = dotenv.config().parsed;
     event.preventDefault();
@@ -97,10 +64,6 @@ const Main = () => {
           Weather App
         </h1>
         <div>
-        {/* <label className="switch">
-  <input type="checkbox" ={console.log("Hi")}/>
-  <span className="slider round"></span>
-</label> */}
         </div>
         <div className="search">
           <form onSubmit={fetchDetails}>

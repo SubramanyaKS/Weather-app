@@ -1,10 +1,10 @@
 import { useContext } from "react";
 import { Weather } from "../context/weatherContext";
 
-export const FetchDetails = (event) => {
-    const {state,data,setData } = useContext(Weather);
+export const FetchDetails = () => {
+    const {data,setData,state } = useContext(Weather);
     //const env = dotenv.config().parsed;
-    event.preventDefault();
+    // event.preventDefault();
     console.log(state);
     // console.log("ID",process.env.REACT_APP_API_KEY)
 

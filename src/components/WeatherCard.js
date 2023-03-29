@@ -16,6 +16,7 @@ import { faWind } from "@fortawesome/free-solid-svg-icons";
 import { faGaugeSimpleMed } from "@fortawesome/free-solid-svg-icons";
 import { faDroplet } from "@fortawesome/free-solid-svg-icons";
 import "bootstrap/dist/css/bootstrap.min.css";
+import MiniCard from "./MiniCard";
 
 const WeatherCard = ({ data }) => {
   const {dark,setDark} = useContext(Theme);
@@ -52,24 +53,10 @@ const WeatherCard = ({ data }) => {
             marginTop: "10px",
           }}
         >
-          <Card className={dark?"card-dark":"card-light"} style={{ width: "20%" }}>
-            <Card.Text>
-              <FontAwesomeIcon icon={faTemperature2} shake />
-              <b> Feels Like: </b> {data.feels_like} °C
-            </Card.Text>
-          </Card>
-          <Card className={dark?"card-dark":"card-light"} style={{ width: "20%" }}>
-          <Card.Text>
-            <FontAwesomeIcon icon={faTemperature0} shake /> <b> Minimum: </b>{" "}
-            {data.min} °C
-          </Card.Text>
-          </Card>
-          <Card className={dark?"card-dark":"card-light"} style={{ width: "20%"}}>
-          <Card.Text>
-            <FontAwesomeIcon icon={faTemperatureHigh} shake />
-            <b>Maximum: </b> {data.max} °C
-          </Card.Text>
-          </Card>
+          {/* shake fade bounce flip*/}
+          <MiniCard icon={faTemperature2} text="Feels Like: " cdata={data.feels_like} unit="°C"  />
+          <MiniCard icon={faTemperature0} text="Minimum: " cdata={data.min} unit="°C"  />
+          <MiniCard icon={faTemperatureHigh} text="Maximum: " cdata={data.max} unit="°C"  />
         </div>
         <div
           style={{
@@ -78,24 +65,10 @@ const WeatherCard = ({ data }) => {
             marginTop: "20px",
           }}
         >
-          <Card className={dark?"card-dark":"card-light"} style={{ width: "20%", }}>
-        <Card.Text>
-          <FontAwesomeIcon icon={faLocation} beatFade /> <b>Latitude: </b>{" "}
-          {data.lat} 
-        </Card.Text>
-        </Card>
-        <Card className={dark?"card-dark":"card-light"} style={{ width: "20%"}}>
-        <Card.Text>
-          <FontAwesomeIcon icon={faLocation} beatFade /> <b>Longitude: </b>{" "}
-          {data.lon} 
-        </Card.Text>
-          </Card>
-          <Card className={dark?"card-dark":"card-light"} style={{ width: "20%" }}>
-        <Card.Text>
-          <FontAwesomeIcon icon={faDroplet} bounce /> <b>Humidity: </b>{" "}
-          {data.humidity} %
-        </Card.Text>
-        </Card>
+        <MiniCard icon={faLocation} text="Latitude: " cdata={data.lat}  />
+        <MiniCard icon={faLocation} text="Longitude: " cdata={data.lon}  />
+        <MiniCard icon={faDroplet} text="Humidity: " cdata={data.humidity} unit="%"  />
+          
         </div>
         <div
           style={{
@@ -104,23 +77,10 @@ const WeatherCard = ({ data }) => {
             marginTop: "10px",
           }}
         >
-          <Card className={dark?"card-dark":"card-light"} style={{ width: "20%" }}>
-        <Card.Text>
-          <FontAwesomeIcon icon={faGaugeSimpleMed} fade />
-          <b>Pressure: </b>
-          {data.pressure} Pa
-        </Card.Text>
-        </Card>
-        <Card className={dark?"card-dark":"card-light"} style={{ width: "20%" }}>
-        <Card.Text>
-          <FontAwesomeIcon icon={faWind} flip /> <b>Wind Speed: </b>{" "}
-          {data.wind_speed} km/hr
-        </Card.Text>
-        </Card>
+           <MiniCard icon={faGaugeSimpleMed} text="Pressure: " cdata={data.pressure} unit="Pa"  />
+           <MiniCard icon={faWind} text="Wind Speed: " cdata={data.max} unit="km/hr"  />
+          
         </div>
-        {/* <Card.Text>
-                <FontAwesomeIcon icon={faTemperatureHalf} shake/><b>Temperature</b> {data.temp} °C 
-                </Card.Text> */}
 
         <Button className="button" color="blue" onClick={refresh}>
           <FontAwesomeIcon icon={faRefresh} spin />
