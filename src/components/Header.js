@@ -8,7 +8,7 @@ const Header = () => {
     <Navbar bg={dark?"dark":"light"} variant={dark?"dark":"light"}>
         <Container>
           <Navbar.Brand href="#home">Weather App</Navbar.Brand>
-          <Button variant={dark?"light":"dark"} onClick={()=>setDark((dark)=>!dark)}>{dark?"Light":"Dark"}</Button>
+          <Button style={{borderRadius:"45%"}} variant={dark?"light":"dark"} onClick={()=>setDark((dark)=>!dark)}>{dark?"Light":"Dark"}</Button>
         </Container>
       </Navbar>
   )
