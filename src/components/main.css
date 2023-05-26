@@ -203,3 +203,7 @@ th td {
   border: none;
   box-shadow: 5px, 5px, 10px,5px, var(--dark);
 }
+
+.theme-button{
+  border-radius: 45%;
+}
