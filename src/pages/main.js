@@ -3,10 +3,10 @@ import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import "../components/main.css";
 import { faSearch } from "@fortawesome/free-solid-svg-icons";
 import "bootstrap/dist/css/bootstrap.min.css";
-import WeatherCard from "../components/WeatherCard";
 import { Theme } from "../context/ThemeContext";
 import { Weather } from "../context/weatherContext";
 import { useWeatherData } from "../hook/useWeatherData";
+import WeatherDisplay from "../components/WeatherDisplay";
 
 const Main = () => {
   const {dark} = useContext(Theme);
@@ -54,11 +54,7 @@ const handleChange = (value) => {
           </form>
         </div>
         <br />
-        {data.name.length > 0 ? (
-          <div className="col   d-flex align-items-center card-show">
-            <WeatherCard data={data} />
-          </div>
-        ) : null}
+        <WeatherDisplay data={data}/>
       </div>
     </>
   );
