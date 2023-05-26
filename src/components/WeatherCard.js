@@ -28,11 +28,7 @@ const WeatherCard = ({ data }) => {
   return (
     <Card className={dark?"card-dark":"card-light"} style={{ width: "85%" }}>
       <div
-        style={{
-          alignItems: "center",
-          textAlign: "center",
-          justifyContent: "center",
-        }}
+        className="image-card"
       >
         <img
           src={`https://openweathermap.org/img/wn/${data.icon}@2x.png`}
