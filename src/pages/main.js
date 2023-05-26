@@ -6,42 +6,21 @@ import "bootstrap/dist/css/bootstrap.min.css";
 import WeatherCard from "../components/WeatherCard";
 import { Theme } from "../context/ThemeContext";
 import { Weather } from "../context/weatherContext";
-import { fetching } from "../util/fetching";
-//import dotenv from  'dotenv'
+import { useWeatherData } from "../hook/useWeatherData";
 
 const Main = () => {
   const {dark} = useContext(Theme);
-  const {data,setData,state,setState} = useContext(Weather);
-
-  const handleChange = (value) => {
+  const {data,state,setState} = useContext(Weather);
+  const { fetchWeatherData } = useWeatherData(state);
+  
+const handleChange = (value) => {
     setState(value);
   };
   const fetchDetails = (event) => {
     //const env = dotenv.config().parsed;
     event.preventDefault();
     console.log(state);
-    
-    fetching(state).then((result) => {
-      // console.log("Result",result.id);
-      setData({
-        id: result.id,
-        name: result.name,
-        country: result.sys.country,
-        lat: result.coord.lat,
-        lon: result.coord.lon,
-        temp: result.main.temp,
-        feels_like: result.main.feels_like,
-        min: result.main.temp_min,
-        max: result.main.temp_max,
-        pressure: result.main.pressure,
-        humidity: result.main.humidity,
-        wind_speed: result.wind.speed,
-        icon: result.weather[0].icon,
-        main: result.weather[0].description,
-      });
-    }).catch((error) => {
-        console.log(error);
-      });
+    fetchWeatherData();
   };
   return (
     <>
