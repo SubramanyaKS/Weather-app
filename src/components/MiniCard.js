@@ -1,7 +1,7 @@
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import React, { useContext } from 'react'
 import { Card } from 'react-bootstrap';
-import './main.css'
+import '../assets/main.css'
 import { Theme } from '../context/ThemeContext';
 
 const MiniCard = ({icon,text,cdata,unit}) => {
