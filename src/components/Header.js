@@ -1,7 +1,7 @@
 import React, { useContext } from 'react'
 import { Button, Container, Navbar } from 'react-bootstrap'
 import { Theme } from '../context/ThemeContext'
-import "./main.css";
+import "../assets/main.css";
 
 const Header = () => {
     const{dark,setDark} = useContext(Theme);
