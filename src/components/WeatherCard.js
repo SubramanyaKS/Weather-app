@@ -16,7 +16,7 @@ import { faWind } from "@fortawesome/free-solid-svg-icons";
 import { faGaugeSimpleMed } from "@fortawesome/free-solid-svg-icons";
 import { faDroplet } from "@fortawesome/free-solid-svg-icons";
 import "bootstrap/dist/css/bootstrap.min.css";
-import MiniCard from "./MiniCard";
+import MiniCard from "./WeatherMiniCard";
 
 const WeatherCard = ({ data }) => {
   const {dark} = useContext(Theme);
