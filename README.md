@@ -1,7 +1,7 @@
 # ⛈ Weather App using React JS
 
 
-A Simple Weather App which gives information of weather details of particular city across the world using API
+A Simple Weather App which gives information of weather details of particular city across the world using openweathermap API
 
 #### API
 
