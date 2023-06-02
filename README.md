@@ -96,7 +96,7 @@ git commit -m "Changes in xyz"
 ```
 git push origin xyz
 ```
-5. Open a pull request
+5. Open a pull request with proper comments.
 
 ---
 ## Deploy
