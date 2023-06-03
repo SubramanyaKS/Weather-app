@@ -11,6 +11,7 @@ The Application Programming Interface is a set of rules and regulations and stan
 ## Features
 
 * Search functionality
+* Responsive
 * Accurate result
 * Decent UI
 ---
