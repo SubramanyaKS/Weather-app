@@ -1,0 +1,10 @@
+.footer{
+    background-color: var(--grey);
+    color: var(--black);
+    padding: 1%;
+}
+.footer-dark{
+    background-color:var(--dark);
+    color:var(--green);
+    padding: 1%;
+}
