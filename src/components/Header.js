@@ -1,5 +1,5 @@
 import React, { useContext } from 'react'
-import { Button, Container, Navbar } from 'react-bootstrap'
+import { Container, Navbar } from 'react-bootstrap'
 import { Theme } from '../context/ThemeContext'
 import "../assets/main.css";
 import Switch from "react-switch";
