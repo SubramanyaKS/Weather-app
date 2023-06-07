@@ -3,6 +3,7 @@ import Header from './components/Header';
 import Main from './pages/main';
 import { ThemeProvider } from './context/ThemeContext';
 import WeatherContext from './context/weatherContext';
+import Footer from './components/Footer';
 
 function App() {
   return (
@@ -11,6 +12,7 @@ function App() {
         <WeatherContext>
         <Header/>
         <Main/>
+        <Footer/>
         </WeatherContext>
       </ThemeProvider>
       
