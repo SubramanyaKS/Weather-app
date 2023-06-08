@@ -7,11 +7,11 @@ import { Theme } from '../context/ThemeContext';
 const MiniCard = ({icon,text,cdata,unit}) => {
   const {dark} = useContext(Theme);
   return (
-    <Card className={dark?"card-dark":"card-light"} style={{ width: "20%" }}>
+    <Card className={dark?"card-dark":"card-light"} style={{ width: "60%" }}>
         <Card.Text>
           <FontAwesomeIcon icon={icon} fade /> <b>{text} </b>{" "}
-          {cdata} {unit}
         </Card.Text>
+        <Card.Text><b>{cdata} {unit}</b></Card.Text>
     </Card>
   )
 }
