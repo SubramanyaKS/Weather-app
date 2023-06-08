@@ -1,5 +1,5 @@
 import React, { useContext } from "react";
-import { Card } from "react-bootstrap";
+import { Card, Col, Row } from "react-bootstrap";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import "../assets/main.css";
 import { Theme } from "../context/ThemeContext";
@@ -41,41 +41,30 @@ const WeatherCard = ({ data }) => {
           <b>{data.name}</b>
         </Card.Title>
         <Card.Subtitle className="mb-5">{data.country}</Card.Subtitle>
-        <div
-          style={{
-            display: "flex",
-            justifyContent: "space-evenly",
-            marginTop: "10px",
-          }}
-        >
-          {/* shake fade bounce flip*/}
+        
+        <Row>
+          <Col>
           <MiniCard icon={faTemperature2} text="Feels Like: " cdata={data.feels_like} unit="°C"  />
+          <MiniCard icon={faLocation} text="Latitude: " cdata={data.lat}  />
+          </Col>
+          <Col>
           <MiniCard icon={faTemperature0} text="Minimum: " cdata={data.min} unit="°C"  />
+          <MiniCard icon={faLocation} text="Longitude: " cdata={data.lon}  />
+          </Col>
+          <Col>
           <MiniCard icon={faTemperatureHigh} text="Maximum: " cdata={data.max} unit="°C"  />
-        </div>
-        <div
-          style={{
-            display: "flex",
-            justifyContent: "space-evenly",
-            marginTop: "20px",
-          }}
-        >
-        <MiniCard icon={faLocation} text="Latitude: " cdata={data.lat}  />
-        <MiniCard icon={faLocation} text="Longitude: " cdata={data.lon}  />
-        <MiniCard icon={faDroplet} text="Humidity: " cdata={data.humidity} unit="%"  />
+          <MiniCard icon={faDroplet} text="Humidity: " cdata={data.humidity} unit="%"  />
+          </Col>
           
-        </div>
-        <div
-          style={{
-            display: "flex",
-            justifyContent: "space-evenly",
-            marginTop: "10px",
-          }}
-        >
-           <MiniCard icon={faGaugeSimpleMed} text="Pressure: " cdata={data.pressure} unit="Pa"  />
+          
+          <Col>
+          <MiniCard icon={faGaugeSimpleMed} text="Pressure: " cdata={data.pressure} unit="Pa"  />
            <MiniCard icon={faWind} text="Wind Speed: " cdata={data.max} unit="km/hr"  />
+          </Col>
           
-        </div>
+          
+    
+        </Row>
 
         <Button className="button" color="blue" onClick={refresh}>
           <FontAwesomeIcon icon={faRefresh} spin />
