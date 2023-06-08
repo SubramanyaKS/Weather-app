@@ -14,14 +14,12 @@ const Main = () => {
     <>
       <div className={dark ? "main-dark" : "main"}>
         <br />
-
         <h1
           className="headline"
           style={dark ? { color: "#00ffff" } : { color: "#000" }}
         >
           Weather App
         </h1>
-        <div></div>
         <SearchBar />
         <br />
         <WeatherDisplay data={data} />
