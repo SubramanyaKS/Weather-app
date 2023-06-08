@@ -9,7 +9,7 @@ import "../assets/main.css";
 const SearchBar = () => {
     const {dark} = useContext(Theme);
     const {state,setState} = useContext(Weather);
-  const { fetchWeatherData } = useWeatherData(state);
+  const { fetchWeatherData } = useWeatherData(`${process.env.REACT_APP_API_LINK}/weather?q=${state}&units=metric&appid=${process.env.REACT_APP_API_KEY}`);
     const handleChange = (value) => {
         setState(value);
       };
