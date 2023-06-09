@@ -4,6 +4,8 @@ export const Weather = createContext();
 
 const WeatherContext =({children})=>{
     const [state, setState] = useState("");
+    const [lon,setLon] = useState('');
+    const [lat, setLat] = useState('');
     const [data, setData] = useState({
         id: 0,
         name: "",
@@ -22,7 +24,7 @@ const WeatherContext =({children})=>{
       });
     
     return(
-        <Weather.Provider value={{data,setData,state,setState}}>
+        <Weather.Provider value={{data,setData,state,setState,lat,setLat,lon,setLon}}>
             {children}
         </Weather.Provider>
 
