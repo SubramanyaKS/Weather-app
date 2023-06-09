@@ -5,6 +5,7 @@ import { Theme } from "../context/ThemeContext";
 import { Weather } from "../context/weatherContext";
 import WeatherDisplay from "../components/WeatherDisplay";
 import SearchBar from "../components/SearchBar";
+import LocationButton from "../components/LocationButton";
 
 const Main = () => {
   const { dark } = useContext(Theme);
@@ -22,6 +23,8 @@ const Main = () => {
         </h1>
         <SearchBar />
         <br />
+        <LocationButton/>
+        <br/>
         <WeatherDisplay data={data} />
       </div>
     </>
