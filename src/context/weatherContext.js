@@ -6,6 +6,7 @@ const WeatherContext =({children})=>{
     const [state, setState] = useState("");
     const [lon,setLon] = useState('');
     const [lat, setLat] = useState('');
+    const [error,setError] = useState('');
     const [data, setData] = useState({
         id: 0,
         name: "",
@@ -24,7 +25,7 @@ const WeatherContext =({children})=>{
       });
     
     return(
-        <Weather.Provider value={{data,setData,state,setState,lat,setLat,lon,setLon}}>
+        <Weather.Provider value={{data,setData,state,setState,error,setError,lat,setLat,lon,setLon}}>
             {children}
         </Weather.Provider>
 
