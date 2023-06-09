@@ -9,7 +9,7 @@ import LocationButton from "../components/LocationButton";
 
 const Main = () => {
   const { dark } = useContext(Theme);
-  const { data } = useContext(Weather);
+  const { data,error } = useContext(Weather);
 
   return (
     <>
@@ -25,7 +25,8 @@ const Main = () => {
         <br />
         <LocationButton/>
         <br/>
-        <WeatherDisplay data={data} />
+        
+        {error?<h3>{error}</h3>:<WeatherDisplay data={data} />}
       </div>
     </>
   );
