@@ -1,7 +1,7 @@
-# ⛈ Weather App using React JS
+# ⛈ Weather App
 
 
-A Simple Weather App which gives information of weather details of particular city across the world using openweathermap API
+A simple weather app built with React.js and utilizes the OpenWeatherMap API to fetch and display weather information for a given location.
 
 #### API
 
@@ -14,6 +14,8 @@ The Application Programming Interface is a set of rules and regulations and stan
 * Responsive
 * Accurate result
 * Decent UI
+* Display current weather conditions, including temperature, humidity, wind speed, and weather description.
+* Fetch weather data based on the user's location or a manually entered city name.
 ---
 ## Technology Used
 
@@ -55,30 +57,34 @@ the details used from the `openweathermap API` is follows:
 ```
 git clone https://github.com/SubramanyaKS/Weather-app.git
 ```
+2. Navigate to the project directory:
 
-2.  Install all dependency in package.json
+```
+cd Weather-app
+```
+3.  Install all dependency in package.json
 
 ```
 npm install
 ```
-3.  Create .env folder and paste the key in variable REACT_APP_API_KEY
+4.Obtain an API key from OpenWeatherMap:
+
+Visit the OpenWeatherMap website and sign up for an account.
+After signing in, go to your account dashboard and generate an API key.
+
+5.  Create a .env file in the root directory of the project and add your API key:
 
 ```
 REACT_APP_API_KEY=<Your openwearhermap API Key>
 ```
 
-4.  Run application using command
+6.  Start the development server using command:
 
 ```
 npm start
 ```
 
-5. Automatically open the website in localhost
-
-```
-http://localhost/3000
-```
----
+7. Open your browser and navigate to `http://localhost:3000` to see the app running.
 
 ## Contribution
 
