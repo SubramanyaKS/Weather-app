@@ -9,7 +9,7 @@ import { Weather } from "../context/weatherContext";
 
 export function useWeatherData(url) {
   // Accessing weather data context
-  const { setData } = useContext(Weather);
+  const { setData,setError } = useContext(Weather);
 
   /**
    * Function to fetch weather data from the API.
@@ -38,8 +38,11 @@ export function useWeatherData(url) {
           icon: result.weather[0].icon,
           main: result.weather[0].description,
         });
+        setError('')
       } catch (error) {
+        setData('')
         console.error('Error occurred while fetching weather data:', error);
+        setError("OOPS !! Cannot find data for the query")
       }
     } else {
       // Reset the weather data state
