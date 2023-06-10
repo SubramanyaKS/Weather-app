@@ -88,6 +88,7 @@ npm start
 
 ## Contribution
 
+Contributions are welcome! If you find any issues or want to add new features, feel free to submit a pull request.
 if you want to contribute to this project. 
 
 1. Fork the repository
