@@ -42,11 +42,12 @@ export function useWeatherData(url) {
       } catch (error) {
         setData('')
         console.error('Error occurred while fetching weather data:', error);
-        setError("OOPS !! Cannot find data for the query")
+        setError("OOPS !! Error fetching weather data. Please try again later.")
       }
     } else {
       // Reset the weather data state
       setData(null);
+      setError("Geo Location Failed");
     }
   };
 
