@@ -3,6 +3,7 @@ import { createContext, useState } from "react";
 export const Weather = createContext();
 
 const WeatherContext =({children})=>{
+    // State variables to manage weather data and other related values
     const [state, setState] = useState("");
     const [lon,setLon] = useState('');
     const [lat, setLat] = useState('');
@@ -25,6 +26,7 @@ const WeatherContext =({children})=>{
       });
     
     return(
+        // Creating a Weather context provider to share data across components
         <Weather.Provider value={{data,setData,state,setState,error,setError,lat,setLat,lon,setLon}}>
             {children}
         </Weather.Provider>
