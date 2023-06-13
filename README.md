@@ -7,7 +7,7 @@ A simple weather app built with React.js and utilizes the OpenWeatherMap API to 
 
 The Application Programming Interface is a set of rules and regulations and standards that allows software programs to interact with each other. It acts as a middleman between two applications, allowing them to exchange data and information
 
----
+
 ## Features
 
 * Search functionality
@@ -16,7 +16,7 @@ The Application Programming Interface is a set of rules and regulations and stan
 * Decent UI
 * Display current weather conditions, including temperature, humidity, wind speed, and weather description.
 * Fetch weather data based on the user's location or a manually entered city name.
----
+
 ## Technology Used
 
 * ![React](https://img.shields.io/badge/react-%2320232a.svg?style=for-the-badge&logo=react&logoColor=%2361DAFB)
@@ -24,7 +24,7 @@ The Application Programming Interface is a set of rules and regulations and stan
 * OpenWeathermap API
 * ![VS Code](https://img.shields.io/badge/Visual_Studio_Code-0078D4?style=for-the-badge&logo=visual%20studio%20code&logoColor=white)
 
----
+
 ## API Details
 
 the details used from the `openweathermap API` is follows:
@@ -43,13 +43,13 @@ the details used from the `openweathermap API` is follows:
 12. `weather.description` Weather condition within the group. You can get the output in your language.
 13. `weather.icon` Weather icon id
 
----
+
 ## Pre Requisite
 * Install ![git](https://img.shields.io/badge/GIT-E44C30?style=for-the-badge&logo=git&logoColor=white)
 * Installation of [![NodeJS](https://img.shields.io/badge/node.js-6DA55F?style=for-the-badge&logo=node.js&logoColor=white)](https://nodejs.org/en/) is mandatory with ![NPM](https://img.shields.io/badge/NPM-%23000000.svg?style=for-the-badge&logo=npm&logoColor=white)
 * Login in to [Openweathermap](https://openweathermap.org/api) api website to get your `API key`
 
----
+
 ## Run and Setup
 
 1. Fork the Project and clone Repository using git clone
@@ -105,7 +105,7 @@ git push origin xyz
 ```
 5. Open a pull request with proper comments.
 
----
+
 ## Deploy
 
 This react website is deployed in github you can see the demo using below link.
@@ -113,19 +113,20 @@ This react website is deployed in github you can see the demo using below link.
 [Live](https://subramanyaks.github.io/Weather-app/)
 
 
----
+## Author
+      Subramanya K S
 
 <!--Licence-->
 ## LICENSE
 
 This project is distributed under MIT License read `LICENSE` file for more details .
 
----
+
 ## Credits
 
 [Openweathermap API](https://openweathermap.org/api)
 
----
+
 
 If you like the project 🌟 the repository.
 
