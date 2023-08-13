@@ -17,14 +17,25 @@ import { faGaugeSimpleMed } from "@fortawesome/free-solid-svg-icons";
 import { faDroplet } from "@fortawesome/free-solid-svg-icons";
 import "bootstrap/dist/css/bootstrap.min.css";
 import MiniCard from "./WeatherMiniCard";
+import { useState } from "react";
+import { celciusToFarenheit } from "../util/converter";
 
 const WeatherCard = ({ data }) => {
   const {dark} = useContext(Theme);
+  const [farenheit,setFarenheit] = useState(false);
   // const {state,dispatch} = useContext(Theme);
 
   const refresh = () => {
     window.location.reload();
   };
+  const convertTemp=()=>{
+    if(farenheit){
+      setFarenheit(false);
+    }
+    else{
+      setFarenheit(true);
+    }
+  }
   return (
     <Card className={dark?"card-dark":"card-light"} style={{ width: "85%" }}>
       <div
@@ -36,7 +47,7 @@ const WeatherCard = ({ data }) => {
       </div>
       <h3>{data.main}</h3>
       <Card.Body style={{ marginTop: "5px" }}>
-        <h1>{data.temp}°C</h1>
+        <h1>{farenheit?celciusToFarenheit(data.temp): data.temp}{farenheit?"°F":"°C"}</h1>
         <Card.Title>
           <b>{data.name}</b>
         </Card.Title>
@@ -44,15 +55,15 @@ const WeatherCard = ({ data }) => {
         
         <Row>
           <Col>
-          <MiniCard icon={faTemperature2} text="Feels Like: " cdata={data.feels_like} unit="°C"  />
+          <MiniCard icon={faTemperature2} text="Feels Like: " cdata={farenheit?celciusToFarenheit(data.feels_like): data.feels_like} unit={farenheit?"°F":"°C"}  />
           <MiniCard icon={faLocation} text="Latitude: " cdata={data.lat}  />
           </Col>
           <Col>
-          <MiniCard icon={faTemperature0} text="Minimum: " cdata={data.min} unit="°C"  />
+          <MiniCard icon={faTemperature0} text="Minimum: " cdata={farenheit?celciusToFarenheit(data.min) :data.min} unit={farenheit?"°F":"°C"}  />
           <MiniCard icon={faLocation} text="Longitude: " cdata={data.lon}  />
           </Col>
           <Col>
-          <MiniCard icon={faTemperatureHigh} text="Maximum: " cdata={data.max} unit="°C"  />
+          <MiniCard icon={faTemperatureHigh} text="Maximum: " cdata={farenheit?celciusToFarenheit(data.max): data.max} unit={farenheit?"°F":"°C"}  />
           <MiniCard icon={faDroplet} text="Humidity: " cdata={data.humidity} unit="%"  />
           </Col>
           
@@ -68,6 +79,9 @@ const WeatherCard = ({ data }) => {
 
         <Button className="button" color="blue" onClick={refresh}>
           <FontAwesomeIcon icon={faRefresh} spin />
+        </Button>
+        <Button className="button" color="blue" onClick={()=>convertTemp()}>
+          {farenheit?"Celcius":"Farenheit"}
         </Button>
       </Card.Body>
     </Card>
