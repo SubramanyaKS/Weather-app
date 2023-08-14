@@ -1,23 +1,21 @@
 import React, { useContext } from "react";
 import "../assets/main.css";
 import "bootstrap/dist/css/bootstrap.min.css";
-import { Theme } from "../context/ThemeContext";
-import { Weather } from "../context/weatherContext";
 import WeatherDisplay from "../components/WeatherDisplay";
 import SearchBar from "../components/SearchBar";
 import LocationButton from "../components/LocationButton";
+import { WeatherDataContext } from "../context/weatherDataContext";
 
 const Main = () => {
-  const { dark } = useContext(Theme);
-  const { data,error } = useContext(Weather);
-
+  const { state } = useContext(WeatherDataContext);
+  const { weatherData } = state;
   return (
     <>
-      <div className={dark ? "main-dark" : "main"}>
+      <div className={state.dark ? "main-dark" : "main"}>
         <br />
         <h1
           className="headline"
-          style={dark ? { color: "#00ffff" } : { color: "#000" }}
+          style={state.dark ? { color: "#00ffff" } : { color: "#000" }}
         >
           Weather App
         </h1>
@@ -25,8 +23,7 @@ const Main = () => {
         <br />
         <LocationButton/>
         <br/>
-        
-        {error?<h3>{error}</h3>:<WeatherDisplay data={data} />}
+        {state.error?<h3>{state.error}</h3>:<WeatherDisplay data={weatherData} />}
       </div>
     </>
   );
