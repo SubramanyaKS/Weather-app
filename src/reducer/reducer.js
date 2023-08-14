@@ -10,18 +10,11 @@ export const weatherReducer = (state, action) => {
         return {...state,lat:action.payload};
       case 'SET_LON':
         return {...state,lon:action.payload};
+      case 'SET_DARK':
+        return {...state,dark:action.payload};
+      case 'SET_LIGHT':
+        return {...state,dark:action.payload};
       default:
         return state;
     }
 };
-
-export const themeReducer = (state,action) =>{
-      switch (action.type) {
-        case 'SET_DARK':
-          return {...state,dark:action.payload};
-        case 'SET_LIGHT':
-          return {...state,dark:action.payload};
-        default:
-          return state;
-      }
-}
