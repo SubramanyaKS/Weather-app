@@ -5,11 +5,11 @@ export const weatherReducer = (state, action) => {
       case 'SET_WEATHER_DATA':
         return { ...state, weatherData: action.payload };
       case 'SET_ERROR':
-        return {...state,error:action.payload};
+        return {...state, error:action.payload};
       case 'SET_LAT':
-        return {...state,lat:action.payload};
+        return {...state, latitude:action.payload};
       case 'SET_LON':
-        return {...state,lon:action.payload};
+        return {...state, longitude:action.payload};
       case 'SET_DARK':
         return {...state,dark:action.payload};
       case 'SET_LIGHT':
