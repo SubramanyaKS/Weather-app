@@ -2,12 +2,12 @@ import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import React, { useContext } from 'react'
 import { Card } from 'react-bootstrap';
 import '../assets/main.css'
-import { Theme } from '../context/ThemeContext';
+import { WeatherDataContext } from '../context/weatherDataContext';
 
 const MiniCard = ({icon,text,cdata,unit}) => {
-  const {dark} = useContext(Theme);
+  const {state} = useContext(WeatherDataContext);
   return (
-    <Card className={dark?"card-dark":"card-light"} style={{ width: "60%" }}>
+    <Card className={state.dark?"card-dark":"card-light"} style={{ width: "60%" }}>
         <Card.Text>
           <FontAwesomeIcon icon={icon} fade /> <b>{text} </b>{" "}
         </Card.Text>
