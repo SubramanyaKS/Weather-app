@@ -3,8 +3,8 @@ import "../assets/main.css";
 import "bootstrap/dist/css/bootstrap.min.css";
 import WeatherDisplay from "../components/WeatherDisplay";
 import SearchBar from "../components/SearchBar";
-import LocationButton from "../components/LocationButton";
 import { WeatherDataContext } from "../context/weatherDataContext";
+import ButtonLocation from "../components/ButtonLocation";
 
 const Main = () => {
   const { state } = useContext(WeatherDataContext);
@@ -21,7 +21,7 @@ const Main = () => {
         </h1>
         <SearchBar />
         <br />
-        <LocationButton/>
+        <ButtonLocation/>
         <br/>
         {state.error?<h3>{state.error}</h3>:<WeatherDisplay data={weatherData} />}
       </div>
