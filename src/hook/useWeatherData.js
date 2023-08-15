@@ -1,5 +1,5 @@
 import { useContext } from "react";
-import { Weather } from "../context/weatherContext";
+import { WeatherDataContext } from "../context/weatherDataContext";
 
 /**
  * Custom hook to fetch weather data from the API.
@@ -9,7 +9,7 @@ import { Weather } from "../context/weatherContext";
 
 export function useWeatherData(url) {
   // Accessing weather data context
-  const { setData,setError } = useContext(Weather);
+  const { dispatch } = useContext(WeatherDataContext);
 
   /**
    * Function to fetch weather data from the API.
@@ -20,34 +20,18 @@ export function useWeatherData(url) {
         // Call the OpenWeatherMap API with the provided URL
         const response = await fetch(url);
         const result = await response.json();
-
         // Update the weather data state
-        setData({
-          id: result.id,
-          name: result.name,
-          country: result.sys.country,
-          lat: result.coord.lat,
-          lon: result.coord.lon,
-          temp: result.main.temp,
-          feels_like: result.main.feels_like,
-          min: result.main.temp_min,
-          max: result.main.temp_max,
-          pressure: result.main.pressure,
-          humidity: result.main.humidity,
-          wind_speed: result.wind.speed,
-          icon: result.weather[0].icon,
-          main: result.weather[0].description,
-        });
-        setError('')
+        dispatch({ type: 'SET_WEATHER_DATA', payload: result });
+        dispatch({ type: 'SET_ERROR', payload: "" });
       } catch (error) {
-        setData('')
         console.error('Error occurred while fetching weather data:', error);
-        setError("OOPS !! Error fetching weather data. Please try again later.")
+        const msg ="OOPS !! Error fetching weather data. Please try again later.";
+        dispatch({ type: 'SET_ERROR', payload: msg });
       }
     } else {
       // Reset the weather data state
-      setData(null);
-      setError("Geo Location Failed");
+      dispatch({ type: 'SET_ERROR', payload: "Geo Location Failed" });
+      
     }
   };
 
