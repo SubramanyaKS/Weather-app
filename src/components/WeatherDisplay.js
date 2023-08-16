@@ -2,7 +2,7 @@ import React from 'react'
 import WeatherCard from './WeatherCard';
 
 const WeatherDisplay = ({data}) => {
-  console.log("icon",data);
+  // console.log("icon",data);
   return (
     <>
     {data? (
