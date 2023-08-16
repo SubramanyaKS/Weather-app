@@ -2,7 +2,7 @@ import React, { useContext } from "react";
 import { Card, Col, Row } from "react-bootstrap";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import "../assets/main.css";
-import { Theme } from "../context/ThemeContext";
+// import { Theme } from "../context/ThemeContext";
 
 import {
   faLocation,
@@ -19,12 +19,11 @@ import "bootstrap/dist/css/bootstrap.min.css";
 import MiniCard from "./WeatherMiniCard";
 import { useState } from "react";
 import { celciusToFarenheit } from "../util/converter";
+import { WeatherDataContext } from "../context/weatherDataContext";
 
-const WeatherCard = ({ data }) => {
-  const {dark} = useContext(Theme);
+const WeatherCard = ( {data} ) => {
+  const {state} = useContext(WeatherDataContext);
   const [farenheit,setFarenheit] = useState(false);
-  // const {state,dispatch} = useContext(Theme);
-
   const refresh = () => {
     window.location.reload();
   };
@@ -37,40 +36,40 @@ const WeatherCard = ({ data }) => {
     }
   }
   return (
-    <Card className={dark?"card-dark":"card-light"} style={{ width: "85%" }}>
+    <Card className={state.dark?"card-dark":"card-light"} style={{ width: "85%" }}>
       <div
         className="image-card">
         <img
-          src={`https://openweathermap.org/img/wn/${data.icon}@2x.png`}
+          src={`https://openweathermap.org/img/wn/${data.weather[0].icon}@2x.png`}
           alt="Images"
         />
       </div>
-      <h3>{data.main}</h3>
+      <h3>{data.weather[0].description}</h3>
       <Card.Body style={{ marginTop: "5px" }}>
-        <h1>{farenheit?celciusToFarenheit(data.temp): data.temp}{farenheit?"°F":"°C"}</h1>
+        <h1>{farenheit?celciusToFarenheit(data.main.temp): data.main.temp}{farenheit?"°F":"°C"}</h1>
         <Card.Title>
           <b>{data.name}</b>
         </Card.Title>
-        <Card.Subtitle className="mb-5">{data.country}</Card.Subtitle>
+        <Card.Subtitle className="mb-5">{data.sys.country}</Card.Subtitle>
         
         <Row>
           <Col>
-          <MiniCard icon={faTemperature2} text="Feels Like: " cdata={farenheit?celciusToFarenheit(data.feels_like): data.feels_like} unit={farenheit?"°F":"°C"}  />
-          <MiniCard icon={faLocation} text="Latitude: " cdata={data.lat}  />
+          <MiniCard icon={faTemperature2} text="Feels Like: " cdata={farenheit?celciusToFarenheit(data.main.feels_like): data.main.feels_like} unit={farenheit?"°F":"°C"}  />
+          <MiniCard icon={faLocation} text="Latitude: " cdata={data.coord.lat}  />
           </Col>
           <Col>
-          <MiniCard icon={faTemperature0} text="Minimum: " cdata={farenheit?celciusToFarenheit(data.min) :data.min} unit={farenheit?"°F":"°C"}  />
-          <MiniCard icon={faLocation} text="Longitude: " cdata={data.lon}  />
+          <MiniCard icon={faTemperature0} text="Minimum: " cdata={farenheit?celciusToFarenheit(data.main.temp_min) :data.main.temp_min} unit={farenheit?"°F":"°C"}  />
+          <MiniCard icon={faLocation} text="Longitude: " cdata={data.coord.lon}  />
           </Col>
           <Col>
-          <MiniCard icon={faTemperatureHigh} text="Maximum: " cdata={farenheit?celciusToFarenheit(data.max): data.max} unit={farenheit?"°F":"°C"}  />
-          <MiniCard icon={faDroplet} text="Humidity: " cdata={data.humidity} unit="%"  />
+          <MiniCard icon={faTemperatureHigh} text="Maximum: " cdata={farenheit?celciusToFarenheit(data.main.temp_max): data.main.temp_max} unit={farenheit?"°F":"°C"}  />
+          <MiniCard icon={faDroplet} text="Humidity: " cdata={data.main.humidity} unit="%"  />
           </Col>
           
           
           <Col>
-          <MiniCard icon={faGaugeSimpleMed} text="Pressure: " cdata={data.pressure} unit="Pa"  />
-           <MiniCard icon={faWind} text="Wind Speed: " cdata={data.max} unit="km/hr"  />
+          <MiniCard icon={faGaugeSimpleMed} text="Pressure: " cdata={data.main.pressure} unit="Pa"  />
+           <MiniCard icon={faWind} text="Wind Speed: " cdata={data.wind.speed} unit="km/hr"  />
           </Col>
           
           
