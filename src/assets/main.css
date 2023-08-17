@@ -207,3 +207,50 @@ th td {
 .theme-button{
   border-radius: 45%;
 }
+
+.pill-button{
+  background-color: #3357f7;
+  border: none;
+  color: black;
+  padding: 10px 20px;
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+  margin: 4px 2px;
+  cursor: pointer;
+  border-radius: 16px;
+}
+.pill-button:hover {
+  background-color: #6796fb;
+}
+.button{
+  border: none;
+  padding: 7px 20px;
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+  font-size: 16px;
+  border-radius: 15%;
+  margin: 4px 2px;
+  transition-duration: 0.4s;
+  cursor: pointer;
+}
+.button-dark{
+  background-color: var(--dark) ;
+  border: 1px solid var(--green);
+  color:var(--green);
+}
+.button-light{
+  background-color: var(--light-blue);
+  border: 1px solid var(--dark);
+  color:var(--dark);
+}
+.button-dark:hover{
+  color: var(--dark);
+  background-color: var(--green);
+}
+.button-light:hover{
+  color: var(--light-blue);
+  background-color: var(--dark);
+}
+

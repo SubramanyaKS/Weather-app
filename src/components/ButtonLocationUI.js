@@ -1,9 +1,11 @@
 import React from 'react';
-import { Button } from 'react-bootstrap';
+import '../assets/main.css';
 
-const ButtonLocationUI = ({ handleFetchWeather }) => {
+const ButtonLocationUI = ({ state,handleFetchWeather }) => {
   return (
-    <Button className='btn btn-primary' onClick={handleFetchWeather}>Current Location</Button>
+    <>
+      <button className={state.dark?"button button-dark":"button button-light"}  onClick={handleFetchWeather}><b>Current Location</b></button>
+    </>
   );
 };
 

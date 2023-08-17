@@ -2,8 +2,6 @@ import React, { useContext } from "react";
 import { Card, Col, Row } from "react-bootstrap";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import "../assets/main.css";
-// import { Theme } from "../context/ThemeContext";
-
 import {
   faLocation,
   faTemperature0,
@@ -76,12 +74,12 @@ const WeatherCard = ( {data} ) => {
     
         </Row>
 
-        <Button className="button" color="blue" onClick={refresh}>
+        <button className={state.dark?"button button-dark":"button button-light"} onClick={refresh}>
           <FontAwesomeIcon icon={faRefresh} spin />
-        </Button>
-        <Button className="button" color="blue" onClick={()=>convertTemp()}>
-          {farenheit?"Celcius":"Farenheit"}
-        </Button>
+        </button>
+        <button className={state.dark?"button button-dark":"button button-light"} onClick={()=>convertTemp()}>
+          <b>{farenheit?"Celcius":"Farenheit"}</b>
+        </button>
       </Card.Body>
     </Card>
   );
