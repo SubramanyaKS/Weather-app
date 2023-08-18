@@ -23,7 +23,7 @@ const Main = () => {
         <br />
         <ButtonLocation/>
         <br/>
-        {state.error?<h3>{state.error}</h3>:<WeatherDisplay data={weatherData} />}
+        {state.error?<h5 style={{color:"#f00"}}>{state.error}</h5>:<WeatherDisplay data={weatherData} />}
       </div>
     </>
   );

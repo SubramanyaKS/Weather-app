@@ -19,14 +19,24 @@ export function useWeatherData(url) {
       try {
         // Call the OpenWeatherMap API with the provided URL
         const response = await fetch(url);
+        if (!response.ok) {
+          throw new Error('Network response was not ok or City name is invalid');
+        }
         const result = await response.json();
-        // Update the weather data state
-        dispatch({ type: 'SET_WEATHER_DATA', payload: result });
-        dispatch({ type: 'SET_ERROR', payload: "" });
+
+        if(result){
+          // Update the weather data state
+          dispatch({ type: 'SET_WEATHER_DATA', payload: result });
+          dispatch({ type: 'SET_ERROR', payload: "" });
+        }
+        else{
+          throw new Error("Weather data not available");
+        }
+        
       } catch (error) {
         console.error('Error occurred while fetching weather data:', error);
-        const msg ="OOPS !! Error fetching weather data. Please try again later.";
-        dispatch({ type: 'SET_ERROR', payload: msg });
+        // const msg ="OOPS !! Error fetching weather data. Please try again later.";
+        dispatch({ type: 'SET_ERROR', payload: error.message });
       }
     } else {
       // Reset the weather data state

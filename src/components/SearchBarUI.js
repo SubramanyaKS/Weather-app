@@ -4,25 +4,26 @@ import React from 'react'
 
 const SearchBarUI = ({handleChange,state,fetchDetails}) => {
   return (
-    <div className="search">
-          <form onSubmit={fetchDetails}>
-            <div className="input-search">
+    <div className="container mt-5">
+      <div className="row justify-content-center">
+        <div className="col-md-6">
+          <form className="input-group" onSubmit={fetchDetails}>
             <input
-            type="text"
-              placeholder="Enter the City"
-              icon={faSearch}
-              className="searchBar"
+              type="text"
+              className="form-control"
+              placeholder="Search..."
+              value={state.city}
               onChange={(e) => {
                 handleChange(e.target.value);
               }}
-              id="outlined-basic"
-              variant="outlined"
-              label="Search"
             />
-            <FontAwesomeIcon icon={faSearch} className="icon-switch"  style={state.dark?{ color:"#00ffff"}:{color:"#000"}} />
-            </div>
+            <button onClick={fetchDetails} type="submit" value="submit" className="btn btn-light">
+              <FontAwesomeIcon icon={faSearch} />
+            </button>
           </form>
         </div>
+      </div>
+    </div>
   )
 }
 
