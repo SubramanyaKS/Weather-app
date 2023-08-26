@@ -8,7 +8,6 @@ import {
   faTemperature2,
   faTemperatureHigh,
 } from "@fortawesome/free-solid-svg-icons";
-import Button from "react-bootstrap/Button";
 import { faRefresh } from "@fortawesome/free-solid-svg-icons";
 import { faWind } from "@fortawesome/free-solid-svg-icons";
 import { faGaugeSimpleMed } from "@fortawesome/free-solid-svg-icons";
@@ -46,9 +45,8 @@ const WeatherCard = ( {data} ) => {
       <Card.Body style={{ marginTop: "5px" }}>
         <h1>{farenheit?celciusToFarenheit(data.main.temp): data.main.temp}{farenheit?"°F":"°C"}</h1>
         <Card.Title>
-          <b>{data.name}</b>
+          <b>{data.name},{data.sys.country}</b>
         </Card.Title>
-        <Card.Subtitle className="mb-5">{data.sys.country}</Card.Subtitle>
         
         <Row>
           <Col>
@@ -63,15 +61,12 @@ const WeatherCard = ( {data} ) => {
           <MiniCard icon={faTemperatureHigh} text="Maximum: " cdata={farenheit?celciusToFarenheit(data.main.temp_max): data.main.temp_max} unit={farenheit?"°F":"°C"}  />
           <MiniCard icon={faDroplet} text="Humidity: " cdata={data.main.humidity} unit="%"  />
           </Col>
-          
-          
+                  
           <Col>
           <MiniCard icon={faGaugeSimpleMed} text="Pressure: " cdata={data.main.pressure} unit="Pa"  />
            <MiniCard icon={faWind} text="Wind Speed: " cdata={data.wind.speed} unit="km/hr"  />
           </Col>
-          
-          
-    
+
         </Row>
 
         <button className={state.dark?"button button-dark":"button button-light"} onClick={refresh}>
