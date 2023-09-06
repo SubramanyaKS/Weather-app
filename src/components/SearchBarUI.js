@@ -1,8 +1,8 @@
 import { faSearch } from '@fortawesome/free-solid-svg-icons';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
-import React from 'react'
+import React from 'react';
 
-const SearchBarUI = ({handleChange,state,fetchDetails}) => {
+const SearchBarUI = ({ handleChange, state, fetchDetails }) => {
   return (
     <div className="container mt-5">
       <div className="row justify-content-center">
@@ -17,14 +17,21 @@ const SearchBarUI = ({handleChange,state,fetchDetails}) => {
                 handleChange(e.target.value);
               }}
             />
-            <button onClick={fetchDetails} type="submit" value="submit" className="btn btn-light">
+            <button
+              type="submit"
+              value="submit"
+              className="btn btn-light"
+              onClick={() => {
+                fetchDetails(); // Trigger the search
+              }}
+            >
               <FontAwesomeIcon icon={faSearch} />
             </button>
           </form>
         </div>
       </div>
     </div>
-  )
-}
+  );
+};
 
-export default SearchBarUI
+export default SearchBarUI;

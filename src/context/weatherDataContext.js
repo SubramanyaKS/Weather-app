@@ -8,6 +8,7 @@ const initialState = {
   latitude:null,
   longitude:null,
   dark:false,
+  loading:false,
 };
 
 const WeatherDataContext = createContext();

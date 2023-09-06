@@ -17,6 +17,7 @@ export function useWeatherData(url) {
   const fetchWeatherData = async () => {
     if (url) {
       try {
+        dispatch({ type: 'SET_LOADING', payload: true })
         // Call the OpenWeatherMap API with the provided URL
         const response = await fetch(url);
         if (!response.ok) {
@@ -37,6 +38,9 @@ export function useWeatherData(url) {
         console.error('Error occurred while fetching weather data:', error);
         // const msg ="OOPS !! Error fetching weather data. Please try again later.";
         dispatch({ type: 'SET_ERROR', payload: error.message });
+      }
+      finally{
+        dispatch({ type: 'SET_LOADING', payload: false })
       }
     } else {
       // Reset the weather data state
