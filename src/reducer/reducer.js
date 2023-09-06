@@ -11,9 +11,11 @@ export const weatherReducer = (state, action) => {
       case 'SET_LON':
         return {...state, longitude:action.payload};
       case 'SET_DARK':
-        return {...state,dark:action.payload};
+        return {...state, dark:action.payload};
       case 'SET_LIGHT':
-        return {...state,dark:action.payload};
+        return {...state, dark:action.payload};
+      case 'SET_LOADING':
+        return {...state, loading:action.payload};
       default:
         return state;
     }
