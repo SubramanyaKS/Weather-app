@@ -1,0 +1,42 @@
+/* Common styles for both mobile and larger screens */
+.container-card {
+    display: flex;
+    flex-wrap: wrap;
+    padding:2%;
+}
+.styled-text-light{
+    text-shadow: -1px 1px 0 var(--blue), 1px 1px 0 var(--blue), 
+    1px -1px 0 var(--blue), -1px -1px 0 var(--blue);
+}
+.styled-text-dark{
+    text-shadow: -1px 1px 0 var(--dark), 1px 1px 0 var(--dark), 
+    1px -1px 0 var(--dark), -1px -1px 0 var(--dark);
+}
+.column {
+    flex: 1;
+    max-width: 100%;
+    padding: 10px;
+}
+.second{
+    margin-top: 5%;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+
+}
+
+.image-card img {
+    max-width: 100%;
+    height: auto;
+}
+.column-c{
+    display: flex; 
+    justify-content: space-between;
+    margin: 0%;
+}
+/* Media query for screens narrower than 768px (typical mobile screens) */
+@media (max-width: 768px) {
+    .container-r {
+        flex-direction: column;
+    }
+}

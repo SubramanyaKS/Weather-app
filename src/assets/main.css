@@ -172,7 +172,7 @@ th td {
 }
 
 .card-light{
-  background-color: var(--light-blue) !important;
+  /* background-color: var(--light-blue) !important; */
   color: var(--black);
   box-shadow: 5px 5px 15px 5px var(--black);
 }
@@ -185,6 +185,7 @@ th td {
 .card {
   background-size: cover;
   /*background-color: #07a9f5 ;*/
+  /* background: url(./snow.jpg); */
   margin-bottom: 10px;
   margin-left: 10px;
   border-radius: 0;
@@ -195,9 +196,9 @@ th td {
   
 }
 .card:hover {
-  background-color: var(--blue) !important;
+  /* background-color: var(--blue) !important; */
   transition: 0.5s;
-  color: var(--dark);
+  /* color: var(--dark); */
   border-radius: 5px;
   
   border: none;
@@ -241,7 +242,7 @@ th td {
   color:var(--green);
 }
 .button-light{
-  background-color: var(--light-blue);
+  background-color: var(--blue);
   border: 1px solid var(--dark);
   color:var(--dark);
 }
