@@ -22,7 +22,6 @@ const Header = () => {
     <Navbar bg={state.dark?"dark":"light"} variant={state.dark?"dark":"light"}>
         <Container>
           <Navbar.Brand href="#home">Weather App</Navbar.Brand>
-          {/* <Switch checked={dark} onHandleColor="#000" offColor='#000' onColor="#fff" checkedIcon={false}  uncheckedIcon={false} onChange={()=>setDark((dark)=>!dark)}/> */}
           <Switch checked={state.dark} onHandleColor="#000" offColor='#add8e6' onColor="#131862" checkedIcon={<FontAwesomeIcon style={{color:"#fff",padding:6}} icon={faMoon}/>}  uncheckedIcon={<FontAwesomeIcon style={{color:"#ffa500",padding:6}} icon={faSun}/>} onChange={()=>changeTheme()}/>
         </Container>
       </Navbar>
