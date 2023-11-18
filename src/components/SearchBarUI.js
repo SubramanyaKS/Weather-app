@@ -1,12 +1,13 @@
 import { faSearch } from '@fortawesome/free-solid-svg-icons';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import React from 'react';
+import VoiceButton from './VoiceButton';
 
 const SearchBarUI = ({ handleChange, state, fetchDetails }) => {
   return (
     <div className="container mt-5">
       <div className="row justify-content-center">
-        <div className="col-md-6">
+        <div className="col-md-6 d-flex">
           <form className="input-group" onSubmit={fetchDetails}>
             <input
               type="text"
@@ -17,6 +18,7 @@ const SearchBarUI = ({ handleChange, state, fetchDetails }) => {
                 handleChange(e.target.value);
               }}
             />
+            <VoiceButton/>
             <button
               type="submit"
               value="submit"
