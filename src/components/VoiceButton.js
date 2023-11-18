@@ -1,8 +1,7 @@
 import React, { useContext, useState } from 'react';
-import { faMicrophone,faEllipsis } from '@fortawesome/free-solid-svg-icons';
-import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { WeatherDataContext } from '../context/weatherDataContext';
 import '../assets/voice.css'
+import VoiceButtonUI from './VoiceButtonUI';
 
 const VoiceButton = () => {
   const { dispatch } = useContext(WeatherDataContext);
@@ -37,9 +36,7 @@ const VoiceButton = () => {
 
   return (
     <>
-      <button className="voice-button" onClick={(e) => handleClick(e)}>
-        {listening ? <FontAwesomeIcon icon={faEllipsis} /> : <FontAwesomeIcon icon={faMicrophone} />}
-      </button>
+      <VoiceButtonUI listening={listening} handleClick={handleClick}/>
     </>
   );
 };
