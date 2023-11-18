@@ -9,9 +9,7 @@
   --light-blue:#00c4ff;
   --blue:#0f91fc;
 }
-html{
-  border: 5px solid #000;
-}
+
 html body {
   width: 100%;
   height: 100%;
@@ -150,6 +148,7 @@ th td {
   align-items: center;
   text-align: center;
   padding-top: 5%;
+  /* border: 1px solid black; */
 }
 .main-dark {
   align-items: center;
