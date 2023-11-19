@@ -2,6 +2,7 @@ import { faSearch } from '@fortawesome/free-solid-svg-icons';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import React from 'react';
 import VoiceButton from './VoiceButton';
+import ButtonLocation from './ButtonLocation';
 
 const SearchBarUI = ({ handleChange, state, fetchDetails }) => {
   return (
@@ -19,6 +20,7 @@ const SearchBarUI = ({ handleChange, state, fetchDetails }) => {
               }}
             />
             <VoiceButton/>
+            <ButtonLocation/>
             <button
               type="submit"
               value="submit"
