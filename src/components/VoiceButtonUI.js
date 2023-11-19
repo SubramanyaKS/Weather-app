@@ -5,7 +5,7 @@ import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 const VoiceButtonUI = ({listening,handleClick}) => {
   return (
     <button className="voice-button" onClick={(e) => handleClick(e)}>
-    {listening ? <FontAwesomeIcon icon={faEllipsis} /> : <FontAwesomeIcon icon={faMicrophone} />}
+    {listening ? <FontAwesomeIcon icon={faEllipsis} bounce/> : <FontAwesomeIcon icon={faMicrophone} />}
   </button>
   )
 }
