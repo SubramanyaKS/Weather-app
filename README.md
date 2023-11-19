@@ -16,6 +16,7 @@ The Application Programming Interface is a set of rules and regulations and stan
 * Decent UI
 * Display current weather conditions, including temperature, humidity, wind speed, and weather description.
 * Fetch weather data based on the user's location or a manually entered city name.
+* Voice Search option (beta).
 
 ## Technology Used
 
@@ -125,7 +126,7 @@ This project is distributed under MIT License read `LICENSE` file for more detai
 ## Credits
 
 [Openweathermap API](https://openweathermap.org/api)
-
+[Fontawesome Icons](https://fontawesome.com/v6/icons)
 
 
 If you like the project 🌟 the repository.
