@@ -231,7 +231,7 @@ th td {
   display: inline-block;
   font-size: 16px;
   border-radius: 15%;
-  margin: 4px 2px;
+  background-color: #fff;
   transition-duration: 0.4s;
   cursor: pointer;
 }
