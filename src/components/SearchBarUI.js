@@ -3,6 +3,8 @@ import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import React from 'react';
 import VoiceButton from './VoiceButton';
 import ButtonLocation from './ButtonLocation';
+import { OverlayTrigger } from 'react-bootstrap';
+import { renderTooltip } from './RenderTooltip';
 
 const SearchBarUI = ({ handleChange, state, fetchDetails }) => {
   return (
@@ -21,6 +23,11 @@ const SearchBarUI = ({ handleChange, state, fetchDetails }) => {
             />
             <VoiceButton/>
             <ButtonLocation/>
+            <OverlayTrigger
+    placement="bottom"
+    delay={{ show: 250, hide: 400 }}
+    overlay={renderTooltip({ message: "search" })}
+  >
             <button
               type="submit"
               value="submit"
@@ -31,6 +38,7 @@ const SearchBarUI = ({ handleChange, state, fetchDetails }) => {
             >
               <FontAwesomeIcon icon={faSearch} />
             </button>
+            </OverlayTrigger>
           </form>
         </div>
       </div>
