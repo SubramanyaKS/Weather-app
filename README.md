@@ -88,23 +88,7 @@ npm start
 
 ## Contribution
 
-Contributions are welcome! If you find any issues or want to add new features, feel free to submit a pull request.
-if you want to contribute to this project. 
-
-1. Fork the repository
-2. Create a new branch (any name except main and master)
-```
-git checkout -b xyz
-```
-3. Make changes and commit your changes.
-```
-git commit -m "Changes in xyz"
-```
-4. Push the changes to new branch.
-```
-git push origin xyz
-```
-5. Open a pull request with proper comments.
+We welcome contributions! If you'd like to contribute to Weather-app, please follow our [Contribution Guidelines](https://github.com/SubramanyaKS/Weather-app/blob/main/CONTRIBUTING.md).
 
 
 ## Deploy
