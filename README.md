@@ -93,9 +93,7 @@ We welcome contributions! If you'd like to contribute to Weather-app, please fol
 
 ## Deploy
 
-This react website is deployed in github you can see the demo using below link.
-
-[Live](https://subramanyaks.github.io/Weather-app/)
+Weather App is live and ready for you to explore! Visit [WeatherApp](https://subramanyaks.github.io/Weather-app/)
 
 
 ## Author
