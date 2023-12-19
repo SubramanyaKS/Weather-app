@@ -10,13 +10,12 @@ The Application Programming Interface is a set of rules and regulations and stan
 
 ## Features
 
-* Search functionality
-* Responsive
-* Accurate result
-* Decent UI
-* Display current weather conditions, including temperature, humidity, wind speed, and weather description.
-* Fetch weather data based on the user's location or a manually entered city name.
-* Voice Search option (beta).
+- The application features a robust search functionality for user-friendly access.
+- Ensuring a seamless experience, the UI is responsive and adapts to various devices and screen sizes.
+- Users can expect precise and reliable results when utilizing the search feature.
+- Current weather conditions, encompassing temperature, humidity, wind speed, and a detailed weather description, are prominently displayed.
+- The application efficiently retrieves weather data by either detecting the user's location or accepting a manually entered city name.
+- In beta stage, the voice search option provides an innovative and hands-free alternative for user interaction.
 
 ## Technology Used
 
