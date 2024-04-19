@@ -25,7 +25,7 @@ import rainImg from '../assets/img/rain.jpg';
 import cloudImg from '../assets/img/cloud.jpg';
 import smokeImg from '../assets/img/smoke.jpg';
 import fogImg from '../assets/img/fog.jpg';
-import Switch from "react-switch";
+import {ToggleSwitch} from 'reactjs-toggleswitch';
 
 const WeatherCard = ({ data }) => {
   const { state } = useContext(WeatherDataContext);
@@ -93,26 +93,15 @@ const WeatherCard = ({ data }) => {
               {data.name},{data.sys.country}
             </b>
           </h6>
-          <Switch
-            checked={farenheit ? true : false}
-            checkedIcon={
-              <FontAwesomeIcon
-                style={{ color: "#fff", padding: 8 }}
-                icon={faC}
-              />
-            }
-            onHandleColor="#fff"
-            offHandleColor="#000"
+          <ToggleSwitch checked={farenheit ? true : false} thumbOnColor="#fff"
+            thumbOffColor="#000"
             offColor="#fff"
             onColor="#000"
-            uncheckedIcon={
-              <FontAwesomeIcon
-                style={{ color: "#000", padding: 8 }}
-                icon={faF}
-              />
-            }
-            onChange={() => convertTemp()}
-          />
+            onToggle={() => convertTemp()}><FontAwesomeIcon
+            style={{ color:farenheit?"#000":"#fff" }}
+            icon={farenheit?faC:faF}
+            
+          /></ToggleSwitch>
         </div>
 
         <div className="column second">
