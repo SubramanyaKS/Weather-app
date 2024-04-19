@@ -51,7 +51,7 @@ input[type="text"]{
   height: 0;
 }
 
- .slider {
+ /* .slider {
   position: absolute;
   cursor: pointer;
   top: 0;
@@ -61,9 +61,9 @@ input[type="text"]{
   background-color: #ccc;
   -webkit-transition: .4s;
   transition: .4s;
-}
+} */
 
-.slider:before {
+/* .slider:before {
   position: absolute;
   content: "";
   height: 26px;
@@ -73,8 +73,8 @@ input[type="text"]{
   background-color: var(--light);
   -webkit-transition: .4s;
   transition: .4s;
-}
-
+} */
+/* 
 input:checked + .slider {
   background-color: #2196F3;
 }
@@ -87,7 +87,7 @@ input:checked + .slider:before {
   -webkit-transform: translateX(26px);
   -ms-transform: translateX(26px);
   transform: translateX(26px);
-}
+} */
 
 /* Rounded sliders */
 .slider.round {
