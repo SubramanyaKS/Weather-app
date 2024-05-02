@@ -11,7 +11,7 @@ const VoiceButtonUI = ({listening,handleClick}) => {
     delay={{ show: 250, hide: 400 }}
     overlay={renderTooltip({ message: "Voice search" })}
   >
-    <button className="voice-button" onClick={(e) => handleClick(e)}>
+    <button className="voice-button" aria-label='voice-button' onClick={(e) => handleClick(e)}>
     {listening ? <FontAwesomeIcon icon={faEllipsis} bounce/> : <FontAwesomeIcon icon={faMicrophone} />}
   </button>
   </OverlayTrigger>
