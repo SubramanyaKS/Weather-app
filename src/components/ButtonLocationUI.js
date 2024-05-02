@@ -12,7 +12,7 @@ const ButtonLocationUI = ({ handleFetchWeather }) => {
     delay={{ show: 250, hide: 400 }}
     overlay={renderTooltip({ message: "current location" })}
   >
-      <button className="button"  onClick={handleFetchWeather}><b> <FontAwesomeIcon icon={faLocationDot}/></b></button>
+      <button className="button" aria-label='location'  onClick={handleFetchWeather}><b> <FontAwesomeIcon icon={faLocationDot}/></b></button>
   </OverlayTrigger>
   );
 };
