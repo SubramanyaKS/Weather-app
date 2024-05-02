@@ -32,6 +32,7 @@ const SearchBarUI = ({ handleChange, state, fetchDetails }) => {
               type="submit"
               value="submit"
               className="btn btn-light"
+              aria-label='submit'
               onClick={() => {
                 fetchDetails(); // Trigger the search
               }}
