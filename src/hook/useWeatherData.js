@@ -35,7 +35,7 @@ export function useWeatherData(url) {
         }
         
       } catch (error) {
-        console.error('Error occurred while fetching weather data:', error);
+        // console.error('Error occurred while fetching weather data:', error);
         // const msg ="OOPS !! Error fetching weather data. Please try again later.";
         dispatch({ type: 'SET_ERROR', payload: error.message });
       }

@@ -21,8 +21,6 @@ const SearchBarUI = ({ handleChange, state, fetchDetails }) => {
                 handleChange(e.target.value);
               }}
             />
-            <VoiceButton/>
-            <ButtonLocation/>
             <OverlayTrigger
     placement="bottom"
     delay={{ show: 250, hide: 400 }}
@@ -40,6 +38,9 @@ const SearchBarUI = ({ handleChange, state, fetchDetails }) => {
               <FontAwesomeIcon icon={faSearch} />
             </button>
             </OverlayTrigger>
+            <VoiceButton/>
+            <ButtonLocation/>
+            
           </form>
         </div>
       </div>

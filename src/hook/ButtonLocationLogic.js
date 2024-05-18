@@ -17,13 +17,14 @@ const useButtonLocationLogic = () => {
           dispatch({ type: 'SET_LON', payload: longitude });
         },
         (error) => {
-          console.error('Error getting user location:', error);
+          dispatch({ type: 'SET_ERROR', payload: error.message });
+          // console.error('Error getting user location:', error);
         }
       );
     } else {
-      console.log("Geolocation not available");
+      dispatch({ type: 'SET_ERROR', payload: "Geo Location Failed" });
     }
-  }, []);
+  }, [dispatch]);
 
   const handleFetchWeather = () => {
     fetchWeatherData();
