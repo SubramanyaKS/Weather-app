@@ -96,7 +96,8 @@ Weather App is live and ready for you to explore! Visit [WeatherApp](https://sub
 
 
 ## Author
-      Subramanya K S
+
+[Subramanya K S](https://subramanyaks.github.io/)
 
 <!--Licence-->
 ## LICENSE
