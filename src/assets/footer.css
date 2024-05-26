@@ -1,10 +1,10 @@
 .footer{
-    background-color: var(--light-blue);
+    background-color: var(--blue);
     color: var(--black);
     padding: 1%;
 }
 .footer-dark{
-    background-color:var(--dark);
+    background-color:var(--black);
     color:var(--green);
     padding: 1%;
 }
