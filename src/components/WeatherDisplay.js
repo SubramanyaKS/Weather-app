@@ -1,4 +1,5 @@
 import React,  {Suspense, lazy } from 'react'
+import Loading from './Loading';
 
 const WeatherCard = lazy(() => import('./WeatherCard'));
 
@@ -8,7 +9,7 @@ const WeatherDisplay = ({data}) => {
     <>
     {
     data? (
-      <Suspense fallback={<div>Loading...</div>}>
+      <Suspense fallback={<Loading/>}>
         <div className="col   d-flex align-items-center card-show">
           <WeatherCard data={data} />
         </div>
