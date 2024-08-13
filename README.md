@@ -108,6 +108,7 @@ This project is distributed under MIT License read `LICENSE` file for more detai
 ## Credits
 
 [Openweathermap API](https://openweathermap.org/api)
+
 [Fontawesome Icons](https://fontawesome.com/v6/icons)
 
 
