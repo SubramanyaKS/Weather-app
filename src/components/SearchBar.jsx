@@ -1,6 +1,6 @@
 import React from 'react'
 import SearchBarUI from './SearchBarUI'
-import useSearchBarLogic from '../hook/SearchBarLogic'
+import useSearchBarLogic from '../hook/useSearchBarLogic'
 import { useContext } from 'react';
 import { WeatherDataContext } from '../context/weatherDataContext';
 

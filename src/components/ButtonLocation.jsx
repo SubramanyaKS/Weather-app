@@ -1,5 +1,5 @@
 import React, { useContext } from 'react';
-import useButtonLocationLogic from '../hook/ButtonLocationLogic';
+import useButtonLocationLogic from '../hook/useButtonLocationLogic';
 import ButtonLocationUI from './ButtonLocationUI';
 import { WeatherDataContext } from '../context/weatherDataContext';
 
