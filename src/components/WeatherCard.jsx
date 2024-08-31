@@ -14,61 +14,55 @@ import { faGaugeSimpleMed } from "@fortawesome/free-solid-svg-icons";
 import { faDroplet } from "@fortawesome/free-solid-svg-icons";
 import "bootstrap/dist/css/bootstrap.min.css";
 import MiniCard from "./WeatherMiniCard";
-import { useState } from "react";
 import { celciusToFarenheit } from "../util/converter";
 import { WeatherDataContext } from "../context/weatherDataContext";
 import "../assets/card.css";
-import defaultImg from '../assets/img/default.jpg';
-import clearImg from '../assets/img/clear.jpg';
-import snowImg from '../assets/img/snow.jpg';
-import rainImg from '../assets/img/rain.jpg';
-import cloudImg from '../assets/img/cloud.jpg';
-import smokeImg from '../assets/img/smoke.jpg';
-import fogImg from '../assets/img/fog.jpg';
 import {ToggleSwitch} from 'reactjs-toggleswitch';
+import { useWeatherCardLogic } from "../hook/useWeatherCardLogic";
 
 const WeatherCard = ({ data }) => {
-  const { state } = useContext(WeatherDataContext);
-  const [farenheit, setFarenheit] = useState(false);
-  const [background, setBackground] = useState(defaultImg);
+  const { refresh, convertTemp, farenheit, state,background } = useWeatherCardLogic(data);
+  // const { state } = useContext(WeatherDataContext);
+  // const [farenheit, setFarenheit] = useState(false);
+  // const [background, setBackground] = useState(defaultImg);
 
-  useEffect(() => {
-    if (data.weather) {
-      updateBackground();
-    }
-  }, [data]);
+  // useEffect(() => {
+  //   if (data.weather) {
+  //     updateBackground();
+  //   }
+  // }, [data]);
 
-  const updateBackground = () => {
-    const weatherCondition = data.weather[0].main;
+  // const updateBackground = () => {
+  //   const weatherCondition = data.weather[0].main;
 
-    // Define background images for different weather conditions
-    const backgrounds = {
-      Clear: clearImg,
-      Rain: rainImg,
-      Snow: snowImg,
-      Clouds: cloudImg,
-      Fog:fogImg,
-      Smoke:smokeImg,
-      Haze:smokeImg,
-      Mist:fogImg,
-      Thunderstorm: "thunderstorm.jpg",
-      // Add more as needed
-    };
+  //   // Define background images for different weather conditions
+  //   const backgrounds = {
+  //     Clear: clearImg,
+  //     Rain: rainImg,
+  //     Snow: snowImg,
+  //     Clouds: cloudImg,
+  //     Fog:fogImg,
+  //     Smoke:smokeImg,
+  //     Haze:smokeImg,
+  //     Mist:fogImg,
+  //     Thunderstorm: "thunderstorm.jpg",
+  //     // Add more as needed
+  //   };
 
-    // Set the background based on the weather condition
-    setBackground(backgrounds[weatherCondition] || defaultImg);
-  };
+  //   // Set the background based on the weather condition
+  //   setBackground(backgrounds[weatherCondition] || defaultImg);
+  // };
 
-  const refresh = () => {
-    window.location.reload();
-  };
-  const convertTemp = () => {
-    if (farenheit) {
-      setFarenheit(false);
-    } else {
-      setFarenheit(true);
-    }
-  };
+  // const refresh = () => {
+  //   window.location.reload();
+  // };
+  // const convertTemp = () => {
+  //   if (farenheit) {
+  //     setFarenheit(false);
+  //   } else {
+  //     setFarenheit(true);
+  //   }
+  // };
   return (
     <Card
       className={state.dark ? "card-dark" : "card-light"}
