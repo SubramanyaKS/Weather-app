@@ -13,7 +13,7 @@ const useSearchBarLogic = () => {
         };
         const fetchDetails = (event) => {
           //const env = dotenv.config().parsed;
-          event.preventDefault();
+          event?.preventDefault();
           // console.log(state.city);
           fetchWeatherData();
         };
