@@ -12,14 +12,12 @@
     "@testing-library/react": "^13.4.0",
     "@testing-library/user-event": "^13.5.0",
     "bootstrap": "^5.2.1",
-    "fs": "0.0.1-security",
-    "gh-pages": "^4.0.0",
+    "gh-pages": "^5.0.0",
     "react": "^18.2.0",
     "react-bootstrap": "^2.5.0",
     "react-dom": "^18.2.0",
     "react-scripts": "5.0.1",
     "reactjs-toggleswitch": "^1.4.0",
-    "save-dev": "0.0.1-security",
     "web-vitals": "^2.1.4"
   },
   "scripts": {
