@@ -1,4 +1,4 @@
-import React, { useContext, useEffect } from "react";
+import React from "react";
 import { Card} from "react-bootstrap";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import "../assets/main.css";
@@ -7,62 +7,23 @@ import {
   faTemperature0,
   faTemperature2,
   faTemperatureHigh,
+  faGaugeSimpleMed ,
+  faDroplet,
+  faRotateRight,
+  faC,
+  faF,
+  faWind
 } from "@fortawesome/free-solid-svg-icons";
-import { faRotateRight, faC, faF } from "@fortawesome/free-solid-svg-icons";
-import { faWind } from "@fortawesome/free-solid-svg-icons";
-import { faGaugeSimpleMed } from "@fortawesome/free-solid-svg-icons";
-import { faDroplet } from "@fortawesome/free-solid-svg-icons";
 import "bootstrap/dist/css/bootstrap.min.css";
 import MiniCard from "./WeatherMiniCard";
 import { celciusToFarenheit } from "../util/converter";
-import { WeatherDataContext } from "../context/weatherDataContext";
 import "../assets/card.css";
 import {ToggleSwitch} from 'reactjs-toggleswitch';
 import { useWeatherCardLogic } from "../hook/useWeatherCardLogic";
 
 const WeatherCard = ({ data }) => {
   const { refresh, convertTemp, farenheit, state,background } = useWeatherCardLogic(data);
-  // const { state } = useContext(WeatherDataContext);
-  // const [farenheit, setFarenheit] = useState(false);
-  // const [background, setBackground] = useState(defaultImg);
-
-  // useEffect(() => {
-  //   if (data.weather) {
-  //     updateBackground();
-  //   }
-  // }, [data]);
-
-  // const updateBackground = () => {
-  //   const weatherCondition = data.weather[0].main;
-
-  //   // Define background images for different weather conditions
-  //   const backgrounds = {
-  //     Clear: clearImg,
-  //     Rain: rainImg,
-  //     Snow: snowImg,
-  //     Clouds: cloudImg,
-  //     Fog:fogImg,
-  //     Smoke:smokeImg,
-  //     Haze:smokeImg,
-  //     Mist:fogImg,
-  //     Thunderstorm: "thunderstorm.jpg",
-  //     // Add more as needed
-  //   };
-
-  //   // Set the background based on the weather condition
-  //   setBackground(backgrounds[weatherCondition] || defaultImg);
-  // };
-
-  // const refresh = () => {
-  //   window.location.reload();
-  // };
-  // const convertTemp = () => {
-  //   if (farenheit) {
-  //     setFarenheit(false);
-  //   } else {
-  //     setFarenheit(true);
-  //   }
-  // };
+  
   return (
     <Card
       className={state.dark ? "card-dark" : "card-light"}
