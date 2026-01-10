@@ -33,6 +33,7 @@ const WeatherCard = ({ data }) => {
         <div className="column">
           <div className="image-card">
             <img
+            loading="lazy"
               src={`https://openweathermap.org/img/wn/${data.weather[0].icon}@2x.png`}
               alt="Images"
             />
@@ -48,7 +49,7 @@ const WeatherCard = ({ data }) => {
               {data.name},{data.sys.country}
             </b>
           </h6>
-          <ToggleSwitch checked={farenheit ? true : false} thumbOnColor="#fff"
+          <ToggleSwitch checked={farenheit} thumbOnColor="#fff"
             thumbOffColor="#000"
             offColor="#fff"
             onColor="#000"
@@ -65,6 +66,7 @@ const WeatherCard = ({ data }) => {
             style={{backgroundImage: `url(${background})`}}
               icon={faTemperatureHigh}
               text="Maximum: "
+              dark={state.dark}
               cdata={
                 farenheit
                   ? celciusToFarenheit(data.main.temp_max)
@@ -76,17 +78,20 @@ const WeatherCard = ({ data }) => {
               icon={faLocation}
               text="Latitude: "
               cdata={data.coord.lat}
+              dark={state.dark}
             />
             <MiniCard
               icon={faGaugeSimpleMed}
               text="Pressure: "
               cdata={data.main.pressure}
+              dark={state.dark}
               unit="Pa"
             />
             <MiniCard
               icon={faWind}
               text="Wind Speed: "
               cdata={data.wind.speed}
+              dark={state.dark}
               unit="km/hr"
             />
           </div>
@@ -94,6 +99,7 @@ const WeatherCard = ({ data }) => {
             <MiniCard
               icon={faTemperature0}
               text="Minimum: "
+              dark={state.dark}
               cdata={
                 farenheit
                   ? celciusToFarenheit(data.main.temp_min)
@@ -109,6 +115,7 @@ const WeatherCard = ({ data }) => {
             <MiniCard
               icon={faTemperature2}
               text="Feels Like: "
+              dark={state.dark}
               cdata={
                 farenheit
                   ? celciusToFarenheit(data.main.feels_like)
@@ -119,6 +126,7 @@ const WeatherCard = ({ data }) => {
             <MiniCard
               icon={faDroplet}
               text="Humidity: "
+              dark={state.dark}
               cdata={data.main.humidity}
               unit="%"
             />

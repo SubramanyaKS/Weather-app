@@ -1,6 +1,5 @@
 import React, { useContext } from "react";
 import "../assets/main.css";
-import "bootstrap/dist/css/bootstrap.min.css";
 import WeatherDisplay from "../components/WeatherDisplay";
 import SearchBar from "../components/SearchBar";
 import { WeatherDataContext } from "../context/weatherDataContext";
