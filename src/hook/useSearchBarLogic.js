@@ -4,20 +4,25 @@ import { WeatherDataContext } from '../context/weatherDataContext';
 
 const useSearchBarLogic = () => {
     const { state, dispatch } = useContext(WeatherDataContext);
-    const { fetchWeatherData } = useWeatherData(`${process.env.REACT_APP_API_LINK}/weather?q=${state.city}&units=metric&appid=${process.env.REACT_APP_API_KEY}`);
-      const handleChange = (value) => {
-        if(value.length>=0){
-          // console.log(value);
-          dispatch({ type: 'SET_CITY', payload: value });
+    const { fetchWeatherData } = useWeatherData();
+
+    const handleChange = (value) => {
+        if (value.length >= 0) {
+            dispatch({ type: 'SET_CITY', payload: value });
         }
-        };
-        const fetchDetails = (event) => {
-          //const env = dotenv.config().parsed;
-          event?.preventDefault();
-          // console.log(state.city);
-          fetchWeatherData();
-        };
-    return{handleChange,fetchDetails};
+    };
+
+    const fetchDetails = (event) => {
+        event?.preventDefault();
+        const query = state.city?.trim();
+        if (!query) {
+            dispatch({ type: 'SET_ERROR', payload: 'Please enter a city' });
+            return;
+        }
+        fetchWeatherData({ q: query }).catch(() => {});
+    };
+
+    return { handleChange, fetchDetails };
 }
 
 export default useSearchBarLogic;
